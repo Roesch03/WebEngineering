@@ -15,12 +15,40 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-/*
+
+
 @RestController
 @RequestMapping("/lectures")
 public class LectureController implements ILectureController {
 
 
+    @java.lang.Override
+    public ResponseEntity<Lecture> createLecture(Lecture lecture) throws BadRequestException {
+        return null;
+    }
 
+    @java.lang.Override
+    public ResponseEntity<Lecture> updateLecture(Lecture lecture) throws BadRequestException {
+        return null;
+    }
 
-}*/
+    @java.lang.Override
+    public ResponseEntity<Lecture> updateLecture(Long id, Lecture lectureDetails) throws ResourceNotFoundException {
+        return null;
+    }
+
+    @java.lang.Override
+    public ResponseEntity<List<Lecture>> getAlllectures() {
+        return null;
+    }
+
+    @java.lang.Override
+    public ResponseEntity<Lecture> getLecture(Long id) throws ResourceNotFoundException {
+        return null;
+    }
+
+    @java.lang.Override
+    public ResponseEntity<Void> deleteLecture(Long id) {
+        return null;
+    }
+}
