@@ -34,7 +34,7 @@ public class LectureController implements ILectureController {
             throw new BadRequestException("Lecture ID must be NULL");
         }
 
-        return new ResponseEntity<>(Lecture, HttpStatus.OK);
+        return new ResponseEntity<>(lecture, HttpStatus.OK);
     }
 
     @Override
