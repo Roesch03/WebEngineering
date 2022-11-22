@@ -1,6 +1,6 @@
 /*
     let lectures =[];
-
+Test
 const addLecture = (ev)=>{
     ev.preventDefault();
     let lecture ={
