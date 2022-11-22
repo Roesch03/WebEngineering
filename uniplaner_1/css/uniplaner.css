@@ -3,8 +3,8 @@
 /*****************************/
 /*test*/
 :root {
-    --primary-color: #1f45cf;
-    --secondary-color:#ededed;
+    --primary-color: #1f45cfd4;
+    --secondary-color:#ffd900fc;
     --secondary-hover-color: rgb(206, 147, 216,);
     --light-grey: rgb(241,243,243);
     --darker-grey:rgb(212,218,218);    
