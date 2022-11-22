@@ -7,8 +7,7 @@ import de.digitra.uniplaner.interfaces.ILectureDateController;
 import de.digitra.uniplaner.service.LectureDateService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired; //zusaetzlich hinzugefuegt
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,52 +22,63 @@ import java.util.Optional;
 @RequestMapping("/lecturedates")
 public class LectureDateController implements ILectureDateController {
 
-    @Autowired
-    LectureDateService lectureDateService;
+    //zusaetzlich hinzugefuegt
+	@Autowired
+	LectureDateService lectureDateService;
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.LectureDate> createLectureDate(de.digitra.uniplaner.domain.LectureDate lecturedate) throws BadRequestException {
-        if(lecturedate.getId() != null){
-            throw new BadRequestException("LectureDate must be NULL!")
-        }
-        return new ResponseEntity<>(lecturedate, HttpStatus.ACCEPTED);
+    public ResponseEntity<LectureDate> createLectureDate(LectureDate lecturedate) throws BadRequestException {
+        if(lecturedate.getId() != null) {
+			throw new BadRequestException("Lecturedate gibt es bereits (Id vorhanden)");
+		}
+    	return ResponseEntity.ok(lectureDateService.save(lecturedate)); //zusätzlich lectureDateService zum Speichern
     }
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.LectureDate> updateLectureDate(de.digitra.uniplaner.domain.LectureDate lecturedate) throws BadRequestException {
-        if(lecturedate.getId() == null){
-            throw new BadRequestException("LectureDate not must be NULL!");
-        }
-        return new ResponseEntity<>(lectureDateService.save(lecturedate), HttpStatus.OK);
+    public ResponseEntity<LectureDate> updateLectureDate(LectureDate lecturedate) throws BadRequestException {
+        if(lecturedate.getId() == null) {
+			throw new BadRequestException("Lecturedate gibt es noch nicht (Id nicht vorhanden)");
+		}
+    	return ResponseEntity.ok(lectureDateService.save(lecturedate));
     }
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.LectureDate> updateLectureDate(Long id, de.digitra.uniplaner.domain.LectureDate lecturedateDetails) throws ResourceNotFoundException {
-        Optinal<LectureDate> foundLectureDate = lectureDateService.findOne(id);
-        if(!foundLectureDate.isPresent()){
-            throw new ResourceNotFoundException("Ressource not found!")
+    public ResponseEntity<LectureDate> updateLectureDate(Long id, @Valid LectureDate lecturedateDetails) throws ResourceNotFoundException {
+        Optional<LectureDate> optionalLectureDate = lectureDateService.findOne(id);
+        if(!(optionalLectureDate.isPresent())){
+            throw new ResourceNotFoundException("Lecturedate mit der angegebenen Id nicht gefunden");
         }
-        LectureDate target = lectureDateService.findOne(id).get();
-        return new ResponseEntity<>(lectureDateService.save(target), HttpStatus.OK);
+        LectureDate lecturedate = optionalLectureDate.get();
+        lecturedate.setEndDate(lecturedateDetails.getEndDate());
+        lecturedate.setLecture(lecturedateDetails.getLecture());
+        lecturedate.setLecturer(lecturedateDetails.getLecturer());
+        lecturedate.setSemester(lecturedateDetails.getSemester());
+        lecturedate.setStartDate(lecturedateDetails.getStartDate());
+        
+        return ResponseEntity.ok(lectureDateService.save(lecturedate));
     }
 
     @Override
-    public ResponseEntity<List<de.digitra.uniplaner.domain.LectureDate>> getAlllecturedates() {
-        return new ResponseEntity<>(lectureDateService.findAll(), HttpStatus.OK);
+    public ResponseEntity<List<LectureDate>> getAlllecturedates() {
+        List<LectureDate> resources = lectureDateService.findAll();
+        return ResponseEntity.ok(resources);
     }
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.LectureDate> getLectureDate(Long id) throws ResourceNotFoundException {
-        Optinal<LectureDate> foundLectureDate = lectureDateService.findOne(id);
-        if(foundLectureDate == null){
-            throw new ResourceNotFoundException("Ressource not found");
+    public ResponseEntity<LectureDate> getLectureDate(Long id) throws ResourceNotFoundException {
+        Optional<LectureDate> optionalLectureDate = lectureDateService.findOne(id);
+        if(!(optionalLectureDate.isPresent())){
+            throw new ResourceNotFoundException("Lecturedate mit der angegebenen Id nicht gefunden");
         }
-        return new ResponseEntity<>(foundLectureDate.get(), HttpStatus.OK);
+        LectureDate lecturedate = optionalLectureDate.get();
+        return ResponseEntity.ok(lecturedate);
     }
 
     @Override
     public ResponseEntity<Void> deleteLectureDate(Long id) {
         lectureDateService.delete(id);
-        return ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return ResponseEntity.noContent().build();
     }
+
+
 }
