@@ -1,0 +1,108 @@
+/*****************************/
+/* Global styles             */
+/*****************************/
+:root {
+    --primary-color: #1f45cf;
+    --secondary-color:#ededed;
+    --secondary-hover-color: rgb(206, 147, 216);
+    --light-grey: rgb(241,243,243);
+    --darker-grey:rgb(212,218,218);    
+}
+
+html,
+body {
+   
+  height: 100vh;
+  width: 100vw;  
+ 
+} 
+
+
+/***********************************************/
+/* design navbar                               */
+/***********************************************/
+.navbar-custom{
+  background-color: var(--primary-color) !important;
+}
+/* max-height von images im Brand-Bereich*/
+.navbar-brand > img {
+    max-height: 30px;
+    width:auto;
+    display: inline-block;
+}
+
+
+/***********************************************/
+/* design sidebar und content area             */
+/***********************************************/
+
+/* end sidebar nav */
+
+
+
+
+/*****************************/
+/* carousel                  */
+/*****************************/
+.carousel{
+  margin-bottom: 4rem;
+}
+.carousel-item{
+  height: 100vh;
+}
+.carousel-item > img{
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.btn{
+  background-color: var(--secondary-color);
+}
+.secon{
+  color:var(--secondary-color);
+}
+.carousel-caption{
+  text-align: center;
+  align-items:center;
+
+  
+}
+.minimal{
+  color: var(--light-grey);
+}
+/* Außenabstand nacc unten: 64px */
+
+/*****************************/
+/* design homepage           */
+/*****************************/
+  
+
+/*****************************/
+/* Design Bootstrap Elemente */
+/*****************************/
+/* Bootstrap Buttons */
+
+/*****************************/
+/*footer                     */
+/*****************************/
+.footerlink{
+  text-decoration: none;
+  color: rgb(241, 243, 243);
+}
+footer{
+  background-color: var(--secondary-color);
+}
+.footercontent{
+  text-decoration: none;
+  color: rgb(212, 218, 218);
+}
+/*************************/
+/* media queries         */
+/*************************/
+
+
+
+
