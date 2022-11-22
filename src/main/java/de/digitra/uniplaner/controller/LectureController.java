@@ -1,17 +1,14 @@
 package de.digitra.uniplaner.controller;
 
 import de.digitra.uniplaner.domain.Lecture;
+import de.digitra.uniplaner.domain.LectureDate;
 import de.digitra.uniplaner.exceptions.BadRequestException;
 import de.digitra.uniplaner.exceptions.ResourceNotFoundException;
 import de.digitra.uniplaner.interfaces.ILectureController;
-import de.digitra.uniplaner.interfaces.ILectureService;
 import de.digitra.uniplaner.service.LectureService;
-import de.digitra.uniplaner.service.LecturerService;
-import net.bytebuddy.dynamic.DynamicType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired; //zusaetzlich hinzugefuegt
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,54 +22,66 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/lectures")
 public class LectureController implements ILectureController {
-
-    @Autowired
-    private ILectureService lectureService;
-
-    @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.Lecture> createLecture(de.digitra.uniplaner.domain.Lecture lecture) throws BadRequestException {
-        if(lecture.getId() != null){
-            throw new BadRequestException("Lecture ID must be NULL");
-        }
-
-        return new ResponseEntity<>(lecture, HttpStatus.OK);
+	
+	//zusaetzlich hinzugefuegt
+	@Autowired
+	LectureService lectureService;
+	
+	@Override
+    public ResponseEntity<Lecture> createLecture(Lecture lecture) throws BadRequestException{
+		if(lecture.getId() != null) {
+			throw new BadRequestException("Lecture gibt es bereits (Id vorhanden)");
+		}
+    	return ResponseEntity.ok(lectureService.save(lecture)); //zusätzlich lectureService zum Speichern
     }
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.Lecture> updateLecture(de.digitra.uniplaner.domain.Lecture lecture) throws BadRequestException {
-        if(Lecture.getID() == null){
-            throw new BadRequestException("Lecture ID must be NULL");
-        }
-        return new ResponseEntity<>(lectureService.save(lecture), HttpStatus.OK);
+    public ResponseEntity<Lecture> updateLecture(Lecture lecture) throws BadRequestException{
+        if(lecture.getId() == null) {
+			throw new BadRequestException("Lecture gibt es noch nicht (Id nicht vorhanden)");
+		}
+    	return ResponseEntity.ok(lectureService.save(lecture));
     }
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.Lecture> updateLecture(Long id, de.digitra.uniplaner.domain.Lecture lectureDetails) throws ResourceNotFoundException {
-        Optinal<Lecture> foundLecture = lectureService.findOne(id);
-        if(!foundLecture.isPresent()){
-            throw new ResourceNotFoundException("Resource not found!");
+    public ResponseEntity<Lecture> updateLecture(Long id, @Valid Lecture lectureDetails) throws ResourceNotFoundException {
+        Optional<Lecture> optionalLecture = lectureService.findOne(id);
+        if(!(optionalLecture.isPresent())){
+            throw new ResourceNotFoundException("Lecture mit der angegebenen Id nicht gefunden");
         }
-        Lecture target = lectureService.findOne(id).get();
-        return new ResponseEntity<>(lectureService.save(target), HttpStatus.OK);
+        Lecture lecture = optionalLecture.get();
+        lecture.setDuration(lectureDetails.getDuration());
+        lecture.setLectureDates(lectureDetails.getLectureDates());
+        lecture.setLectureName(lectureDetails.getLectureName());
+        lecture.setLecturers(lectureDetails.getLecturers());
+        lecture.setModulName(lectureDetails.getModulName());
+        lecture.setStudyProgram(lectureDetails.getStudyProgram());
+        lecture.setStudyProgramm(lectureDetails.getStudyProgramm());
+        
+        return ResponseEntity.ok(lectureService.save(lecture));
     }
 
     @Override
-    public ResponseEntity<List<de.digitra.uniplaner.domain.Lecture>> getAlllectures() {
-        return new ResponseEntity<>(lectureService.findAll(), HttpStatus.OK);
+    public ResponseEntity<List<Lecture>> getAlllectures() {
+        List<Lecture> resources = lectureService.findAll();
+        return ResponseEntity.ok(resources);
     }
 
     @Override
-    public ResponseEntity<de.digitra.uniplaner.domain.Lecture> getLecture(Long id) throws ResourceNotFoundException {
-        Optinal<Lecture> foundLecture = lectureService.findOne(id);
-        if(foundLecture == null){
-            throw new ResourceNotFoundException("Ressource not found!");
+    public ResponseEntity<Lecture> getLecture(Long id) throws ResourceNotFoundException {
+        Optional<Lecture> optionalLecture = lectureService.findOne(id);
+        if(!(optionalLecture.isPresent())){
+            throw new ResourceNotFoundException("Lecture mit der angegebenen Id nicht gefunden");
         }
-        return new ResponseEntity<>(foundLecture.get(), HttpStatus.OK);
+        Lecture lecture = optionalLecture.get();
+        return ResponseEntity.ok(lecture);
     }
 
     @Override
     public ResponseEntity<Void> deleteLecture(Long id) {
         lectureService.delete(id);
-        return ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return ResponseEntity.noContent().build();
     }
+
+    
 }
