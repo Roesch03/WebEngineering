@@ -80,7 +80,7 @@ hr {
 section h1 {
     font-size: 38px;
     line-height: 1.25;
-    color: #202124;
+    color: var(--secondary-color);
     font-weight: 400;
     word-wrap: initial;
     word-spacing: 0;
