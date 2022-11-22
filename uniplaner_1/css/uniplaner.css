@@ -205,6 +205,9 @@ input[type=text] {
     transform: translateY(-4px);
 }
 
+#editImg:hover{
+  cursor: pointer;
+}
 
 /*************************/
 /* dashboard             */
