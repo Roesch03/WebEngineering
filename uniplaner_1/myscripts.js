@@ -65,7 +65,7 @@ function insertNewRecord(data){
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.dozent;
     cell3 = newRow.insertCell(3);
-    cell3.innerHTML = '<button onClick="onEdit(this)"><img src="assets/edit.png"></button><button onClick="onDelete(this)"><img src="assets/delete.png"></button>';
+    cell3.innerHTML = '<button onClick="onEdit(this)"><img src="assets/edit.png" width="10px" height="10px"></button><button onClick="onDelete(this)"><img src="assets/delete.png" width="10px" height="10px"></button>';
 
 }
 
