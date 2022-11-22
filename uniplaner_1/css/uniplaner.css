@@ -24,6 +24,8 @@ body {
 .navbar-custom{
   background-color: var(--primary-color) !important;
 }
+
+
 /* max-height von images im Brand-Bereich*/
 .navbar-brand > img {
     max-height: 30px;
@@ -35,6 +37,24 @@ body {
 /***********************************************/
 /* design sidebar und content area             */
 /***********************************************/
+
+
+hr {
+    border-top: 1px solid grey;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+section h1 {
+    font-size: 38px;
+    line-height: 1.25;
+    color: #202124;
+    font-weight: 400;
+    word-wrap: initial;
+    word-spacing: 0;
+    text-align: center;
+}
 
 /* end sidebar nav */
 
