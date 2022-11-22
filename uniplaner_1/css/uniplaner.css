@@ -132,7 +132,9 @@ section{
 /*****************************/
 /* design homepage           */
 /*****************************/
-  
+.form-action-button{
+    margin: 10px;
+}
 
 /*****************************/
 /* Design Bootstrap Elemente */
