@@ -32,8 +32,19 @@ function onFormSubmit(){
     else
         updateRecord(formData);
 
+    clearInput();
+
 
     recetForm();
+}
+
+function clearInput(){
+    var getValue = document.getElementById("name");
+    getValue.value = "";
+    getValue = document.getElementById("kurs");
+    getValue.value = "";
+    getValue = document.getElementById("dozent");
+    getValue.value = "";
 }
 
 function readFormData(){
