@@ -25,6 +25,30 @@ body {
   background-color: var(--primary-color) !important;
 }
 
+#nav{
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px -2px gray;
+}
+
+#nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: 0.33s;
+}
+
+#nav ul li:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 1px;
+    content: "";
+    display: block;
+    height: 3px;
+    right: 50%;
+    position: absolute;
+    background: red;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
+    width: 0;
+    border-radius: 20px;
+}
+
 
 /* max-height von images im Brand-Bereich*/
 .navbar-brand > img {
@@ -54,6 +78,16 @@ section h1 {
     word-wrap: initial;
     word-spacing: 0;
     text-align: center;
+    margin-bottom: 2rem;
+}
+
+section p{
+    text-align: justify;
+}
+
+section{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
 }
 
 /* end sidebar nav */
