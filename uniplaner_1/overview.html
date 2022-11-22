@@ -57,38 +57,40 @@
     <hr>
 
     <section>
+        <h1>Termin hinzufügen</h1>
         <div class="container text-center">
-          <table>
-              <tr>
-                  <td>
-                      <div class="container text-center">
-
-                          <form onsubmit="event.preventDefault();onFormSubmit();">
-                              <div class="row">
-
-                                  <div class="col">
-                                      <label>Name:</label>
-                                      <input type="text" name="name" id="name">
-                                  </div>
-                                  <div class="col">
-                                      <label>Kurs:</label>
-                                      <input type="text" name="kurs" id="kurs">
-                                  </div>
-                                  <div class="col">
-                                      <label>Dozent:</label>
-                                      <input type="text" name="dozent" id="dozent">
-                                  </div>
-                                  <div class="col" class="form-action-button">
-                                      <button id="submit-button" clas ="hero" type="submit" value="Submit">Hinzufügen</button>
-                                  </div>
-                          </form>
-                      </div>
-      </div>
-    </td>
-    </tr>
-    </table>
+            <table>
+                <tr>
+                    <td>
+                        <div class="container text-center">
+                            <form onsubmit="event.preventDefault();onFormSubmit();">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Name:</label>
+                                        <input type="text" name="name" id="name">
+                                    </div>
+                                    <div class="col">
+                                        <label>Kurs:</label>
+                                        <input type="text" name="kurs" id="kurs">
+                                    </div>
+                                    <div class="col">
+                                        <label>Dozent:</label>
+                                        <input type="text" name="dozent" id="dozent">
+                                    </div>
+                                    <div class="col" class="form-action-button">
+                                        <button id="submit-button" clas ="hero" type="submit" value="Submit">Hinzufügen</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </section>
+
+    <hr>
+
     <table class="table list" id="lectureList">
         <thead>
         <tr>
