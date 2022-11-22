@@ -33,6 +33,7 @@ body {
 #nav ul li:hover {
     background-color: rgba(255, 255, 255, 0.05);
     transition: 0.33s;
+    border-radius: 10px;
 }
 
 #nav ul li:after {
@@ -158,6 +159,38 @@ footer{
 /*************************/
 /* media queries         */
 /*************************/
+
+
+/*************************/
+/* overview              */
+/*************************/
+
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#submit-button {
+    background-color: transparent;
+    border-radius: 45px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-size: 15px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease 0s;
+}
+
+#submit-button:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
 
 
 
