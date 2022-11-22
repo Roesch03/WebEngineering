@@ -45,6 +45,7 @@ function clearInput(){
     getValue.value = "";
     getValue = document.getElementById("dozent");
     getValue.value = "";
+    selectedRow = null;
 }
 
 function readFormData(){
@@ -65,7 +66,7 @@ function insertNewRecord(data){
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.dozent;
     cell3 = newRow.insertCell(3);
-    cell3.innerHTML = '<button onClick="onEdit(this)"><img src="assets/edit.png" width="10px" height="10px"></button><button onClick="onDelete(this)"><img src="assets/delete.png" width="10px" height="10px"></button>';
+    cell3.innerHTML = '<a onClick="onEdit(this)"><img src="assets/edit.png" width="25px"></a><a onClick="onDelete(this)"><img src="assets/delete.png" width="25px"></a>'
 
 }
 
@@ -87,6 +88,7 @@ function updateRecord(formData){
     selectedRow.cells[0].innerHTML = formData.name;
     selectedRow.cells[1].innerHTML = formData.kurs;
     selectedRow.cells[2].innerHTML = formData.dozent;
+    selectedRow= null;
 }
 
 function onDelete(td){
