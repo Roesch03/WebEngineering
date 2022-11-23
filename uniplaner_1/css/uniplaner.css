@@ -3,14 +3,14 @@
 /*****************************/
 /*test2*/
 :root {
-    --primary-color: #6B7A8F;
-    --secondary-color:#F7882F;
+    --primary-color: #2364AA;
+    --secondary-color:#EA7317;
     --secondary-hover-color: rgb(206, 147, 216, 1);
     --tertiary-color: #DCC7AA;
     --light-grey: rgb(241,243,243);
     --darker-grey:rgb(212,218,218);
     --primary-btn-color: rgb(247, 136, 47, 80%);
-    --footer-color:#6b7a8fe9;
+    --footer-color:#2364aab8;
 }
 
 html,
