@@ -30,6 +30,14 @@ function readFormData(){
         dozent: document.getElementById("dozent").value
     }
 }
+
+
+
+function savedData(type){
+    //var type = JSON.parse(localStorage.getItem('name'));
+
+}
+
 function insertNewRecord(data){
     var table = document.getElementById("lectureList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
