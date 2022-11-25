@@ -3,10 +3,11 @@
 /*****************************/
 /*test2*/
 :root {
-    --primary-color: #3b6189;
-    --secondary-color:#EA7317;
-    --secondary-hover-color: rgb(206, 147, 216, 1);
-    --tertiary-color: #dbbc91;
+    --blueberry: #4d678d;
+    --apricot:#ef7c1d;
+    --citrus: #F7C331;
+    --appleCore: #dbbc91;
+    --hover-color: rgb(206, 147, 216, 1);
     --light-grey: rgb(241,243,243);
     --darker-grey:rgb(212,218,218);
     --primary-btn-color: rgb(247, 136, 47, 80%);
@@ -28,7 +29,7 @@ body {
 /* design navbar                               */
 /***********************************************/
 .navbar-custom{
-  background-color: var(--primary-color) !important;
+  background-color: var(--blueberry) !important;
 }
 
 #nav{
@@ -83,7 +84,7 @@ hr {
 section h1 {
     font-size: 38px;
     line-height: 1.25;
-    color: var(--secondary-color);
+    color: var(--apricot);
     font-weight: 400;
     word-wrap: initial;
     word-spacing: 0;
@@ -122,10 +123,10 @@ section{
 }
 
 .btn{
-  background-color: var(--tertiary-color);
+  background-color: var(--citrus);
   border: none;
   border-radius: 45px;
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--citrus);
   display: inline-block;
   cursor: pointer;
   color: #000000;
@@ -148,7 +149,7 @@ cursor: pointer;
 }
 
 .secon{
-  color:var(--secondary-color);
+  color:var(--apricot);
   font-size: 290%;
 }
 
@@ -231,8 +232,8 @@ input[type=text] {
 
 .submit-button {
     border-radius: 45px;
-    background-color: var(--tertiary-color);
-    border: 1px solid var(--tertiary-color);
+    background-color: var(--citrus);
+    border: 1px solid var(--citrus);
     display: inline-block;
     cursor: pointer;
     color: #000000;
@@ -260,9 +261,18 @@ input[type=text] {
   }
 }
 
-.a .nav-link .active{
-  background-color: var(--tertiary-color);
-  color: #ff0000;
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #dbbc91;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  color: #000000;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
 /*************************/
