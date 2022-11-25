@@ -1,22 +1,20 @@
-var id = 0;
 
-
-function onFormSubmit() {
-    dataHandler(type); //Wie bekomme ich den type?
+function onFormSubmit(type) {
+    dataHandler(type);
 
 }
 
 function dataHandler(type){
     let data = getDataFromLocalStorage(type);
-    data.NewField = getDataFromInput();
-    setDataToLocalStorage(data);
+    data[data.length] = getDataFromInput();
+    setDataToLocalStorage(type, data);
 
 }
 
 
 function getDataFromInput(){
     return {
-        id: id,
+        id: getNewId(),
         data: document.getElementById("data").value,
         infos: document.getElementById("infos").value
         //name: document.getElementById("name").value,
@@ -26,14 +24,18 @@ function getDataFromInput(){
 }
 
 function getDataFromLocalStorage(type){
-    return localStorage.getItem('type') ? JSON.parse(localStorage.getItem('type')) : [];
+    let item = localStorage.getItem(type)
+    return item ? JSON.parse(item) : [];
 }
 
-function setDataToLocalStorage(item){
-    localStorage.setItem(id, JSON.stringify(item));
-    incId();
+function setDataToLocalStorage(type, data){
+    localStorage.setItem(type, JSON.stringify(data));
 }
 
-function incId(){
+
+function getNewId(){
+    let id = getDataFromInput("id");
     id++;
+    setDataToLocalStorage("id", Id);
+    return id;
 }
