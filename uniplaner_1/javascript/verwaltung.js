@@ -5,21 +5,54 @@ function onFormSubmit(type) {
 }
 
 function dataHandler(type){
-    let data = getDataFromLocalStorage(type);
+    let data = typeHandler(type);
     data[data.length] = getDataFromInput();
     setDataToLocalStorage(type, data);
-
 }
 
+function typeHandler(type){
+    if (type==='dozent') {
+        return getDataDozent();
+    }if (type==='semester') {
+        return getDataSemester();
+    }if (type==='vorlesung'){
+        return getDataVorlesung();
+    }if (type==='vorlesungstermin'){
+        return getDataVorlesungstermin();
+    }else{
+        null
+    }
+}
 
-function getDataFromInput(){
+function getDataDozent(){
     return {
         id: getNewId(),
-        data: document.getElementById("data").value,
+        data: document.getElementById("name").value,
         infos: document.getElementById("infos").value
-        //name: document.getElementById("name").value,
-        //kurs: document.getElementById("kurs").value,
-        //dozent: document.getElementById("dozent").value
+    }
+}
+
+function getDataSemester(){
+    return {
+        id: getNewId(),
+        data: document.getElementById("name").value,
+        infos: document.getElementById("infos").value
+    }
+}
+
+function getDataVorlesung(){
+    return {
+        id: getNewId(),
+        data: document.getElementById("name").value,
+        infos: document.getElementById("infos").value
+    }
+}
+
+function getDataVorlesungstermin(){
+    return {
+        id: getNewId(),
+        data: document.getElementById("name").value,
+        infos: document.getElementById("infos").value
     }
 }
 
@@ -38,4 +71,14 @@ function getNewId(){
     id++;
     setDataToLocalStorage("id", id);
     return id;
+}
+
+function update(type, id){ //Press edit button
+ // daten holen und ändern und dann neu rein
+    let item = getDataFromLocalStorage(type);//Daten mit dem type aus local storage holen
+
+}
+
+function creatTable(type){
+
 }
