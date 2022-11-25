@@ -138,7 +138,7 @@ section{
 }
 
 .btn:hover {
-  box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 12px 17px rgba(0, 0, 0, 0);
   transform: translateY(-1px);
 }
 
@@ -148,7 +148,7 @@ cursor: pointer;
 
 .secon{
   color:var(--secondary-color);
-  font-size: 300%;
+  font-size: 290%;
 }
 
 .carousel-caption{
@@ -166,11 +166,11 @@ cursor: pointer;
 
 .minimal{
   color: rgb(255, 255, 255);
-  font-size: 200%;
+  font-size: 150%;
 }
 
 .text-shadow{
-    text-shadow: 3px 3px 8px #000000;;
+    text-shadow: 3px 3px 8px #000000;
 
 }
 
@@ -181,6 +181,17 @@ cursor: pointer;
 /*****************************/
 .form-action-button{
     margin: 10px;
+}
+
+#impressum-generator{
+  font-size: 100%;
+  color: var(--light-grey);
+}
+
+#impressum-generator>a{
+  font-size: 100%;
+  text-decoration: none;
+  color: var(--light-grey);
 }
 
 /*****************************/
