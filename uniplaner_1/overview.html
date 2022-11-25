@@ -83,19 +83,17 @@
                             <form onsubmit="event.preventDefault();onFormSubmit('studiengang');">
                                 <div class="row">
                                     <div class="col">
+                                      <!--vorher name-->
+                                        <label>Abkürzung:</label>
+                                        <input type="text" name="acronym" id="acronym">
+                                    </div>
+                                    <div class="col">
+                                      <!--vorher kurs-->
                                         <label>Name:</label>
                                         <input type="text" name="name" id="name">
                                     </div>
-                                    <div class="col">
-                                        <label>Kurs:</label>
-                                        <input type="text" name="kurs" id="kurs">
-                                    </div>
-                                    <div class="col">
-                                        <label>Dozent:</label>
-                                        <input type="text" name="dozent" id="dozent">
-                                    </div>
                                     <div class="col" class="form-action-button">
-                                        <button class="submit-button" clas ="hero" type="submit" value="Submit">Hinzufügen</button>
+                                        <button class="submit-button" clas ="hero" type="submit" value="Submit">+ Hinzufügen</button>
                                     </div>
                                 </div>
                             </form>
