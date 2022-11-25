@@ -48,8 +48,8 @@ function insertNewRecord(data){
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.dozent;
     cell3 = newRow.insertCell(3);
-    //change "submit-button"
-    cell3.innerHTML = '<a onClick="onEdit(this)" class="col" class="form-action-button"><button class="submit-button" class ="hero" type="submit" value="Submit"><img src="assets/edit.png" width="25px"></button></a><a onClick="onDelete(this)" class="col" class="form-action-button"><button class="submit-button" class ="hero" type="submit" value="Submit"><img src="assets/delete.png"width="25px"></button></a>'
+    //change "submit-button edit-btn"
+    cell3.innerHTML = '<a onClick="onEdit(this)" class="col" class="form-action-button"><button class="submit-button edit-btn" class ="hero" type="submit" value="Submit"><img src="assets/edit.png" width="25px"></button></a><a onClick="onDelete(this)" class="col" class="form-action-button"><button class="submit-button edit-btn" class ="hero" type="submit" value="Submit"><img src="assets/delete.png"width="25px"></button></a>'
 }
 
 function resetFrom(){
