@@ -36,6 +36,6 @@ function setDataToLocalStorage(type, data){
 function getNewId(){
     let id = getDataFromInput("id");
     id++;
-    setDataToLocalStorage("id", Id);
+    setDataToLocalStorage("id", id);
     return id;
 }
