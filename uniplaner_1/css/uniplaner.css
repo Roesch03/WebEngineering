@@ -17,7 +17,7 @@ html,
 body {
    
   height: 100vh;
-  width: 100vw;  
+  width: 100%;  
  
 } 
 .spaceToBottom{
@@ -103,8 +103,6 @@ section{
 /* end sidebar nav */
 
 
-
-
 /*****************************/
 /* carousel                  */
 /*****************************/
@@ -119,23 +117,56 @@ section{
   object-fit: cover;
   top: 0;
   left: 0;
-  min-width: 100%;
+  /*min-width: 100%;*/
   min-height: 100%;
 }
 .btn{
-  background-color: var(--primary-btn-color);
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 45px;
+  border: 1px solid var(--secondary-color);
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-size: 15px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
 }
+
+.btn:hover {
+  box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+#editImg:hover{
+cursor: pointer;
+}
+
 .secon{
   color:var(--secondary-color);
+  font-size: 300%;
 }
+
 .carousel-caption{
   text-align: center;
   align-items:center;
-
-  
+  top: 20%;
+  bottom: 10%;
 }
+
+.carousel-caption>h1{
+  text-align: center;
+  align-items:center;
+  bottom: 10%; 
+}
+
 .minimal{
-  color: black;
+  color: rgb(255, 255, 255);
+  font-size: 200%;
 }
 
 .text-shadow{
@@ -187,9 +218,7 @@ input[type=text] {
 }
 
 .submit-button {
-   /*background-color: transparent;*/
     border-radius: 45px;
-    /*border: 1px solid #dcdcdc;*/
     border: 1px solid var(--primary-color);
     display: inline-block;
     cursor: pointer;
