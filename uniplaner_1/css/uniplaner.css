@@ -296,10 +296,13 @@ input[type=text] {
   color: #495057;
   background-color: #dbbc91;
   border-color: #dee2e6 #dee2e6 #fff;
+  display: flex;
+  min-width: 200px;
 }
 
 .nav-link {
-  display: block;
+  display: flex;
+  flex-direction: row;
   padding: .5rem 1rem;
   color: #000000;
   text-decoration: none;
