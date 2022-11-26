@@ -294,6 +294,10 @@ input[type=text] {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
+.nav-link:hover {
+  color: var(--appleCore);
+}
+
 .col {
   flex: 1 0 0%;
 }
