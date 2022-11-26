@@ -89,7 +89,8 @@
                                     </div>
                                     <div class="col">
                                         <label>Studiengangsleiter:</label>
-                                        <input type="text" name="studiengangsleiter" id="studiengangsleiter">
+                                        <input type="text" name="studiengangsleiter" id="studiengangsleiter" list="dlDozent" onclick="setDropDownData('dozent')>
+                                        <datalist id="dlDozent"></datalist>
                                     </div>
                                     <div class="col" class="form-action-button">
                                         <button class="submit-button" clas ="hero" type="submit" value="Submit">+ Hinzufügen</button>
