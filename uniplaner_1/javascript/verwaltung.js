@@ -19,41 +19,89 @@ function typeHandler(type){
         return getDataVorlesung();
     }if (type==='vorlesungstermin'){
         return getDataVorlesungstermin();
+    }if (type==='studiengang'){
+        return getDataStudiengang();
     }else{
         null
     }
 }
 
 function getDataDozent(){
-    return {
+    let data = {
         id: getNewId(),
-        data: document.getElementById("name").value,
-        infos: document.getElementById("infos").value
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        alter: document.getElementById("alter").value,
+        github: document.getElementById("github").value
     }
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("alter").value = "";
+    document.getElementById("github").value = "";
+
+    return data
+
+}
+
+function getDataStudiengang(){
+    let data = {
+        id: getNewId(),
+        bezeichnung: document.getElementById("bezeichnung").value,
+        studiengangsleiter: document.getElementById("studiengangsleiter").value
+    }
+
+    document.getElementById("bezeichnung").value = "";
+    document.getElementById("studiengangsleiter").value = "";
+
+    return data;
 }
 
 function getDataSemester(){
-    return {
+    let data = {
         id: getNewId(),
-        data: document.getElementById("name").value,
-        infos: document.getElementById("infos").value
+        bezeichnung: document.getElementById("bezeichnung").value,
+        studiengang: document.getElementById("studiengang").value,
+        datum: document.getElementById("datum").value
     }
+
+    document.getElementById("bezeichnung").value = "";
+    document.getElementById("studiengang").value = "";
+    document.getElementById("datum").value = "";
+
+    return data;
 }
 
 function getDataVorlesung(){
-    return {
+    let data = {
         id: getNewId(),
-        data: document.getElementById("name").value,
-        infos: document.getElementById("infos").value
+        bezeichnung: document.getElementById("bezeichnung").value,
+        kurs: document.getElementById("kurs").value,
+        dozent: document.getElementById("dozent").value
     }
+
+    document.getElementById("bezeichnung").value = "";
+    document.getElementById("kurs").value = "";
+    document.getElementById("dozent").value = "";
+
+    return data;
 }
 
 function getDataVorlesungstermin(){
-    return {
+    let data = {
         id: getNewId(),
-        data: document.getElementById("name").value,
-        infos: document.getElementById("infos").value
+        vorlesung: document.getElementById("vorlesung").value,
+        datum: document.getElementById("datum").value,
+        start: document.getElementById("start").value,
+        ende: document.getElementById("ende").value
     }
+
+    document.getElementById("vorlesung").value = "";
+    document.getElementById("datum").value = "";
+    document.getElementById("start").value = "";
+    document.getElementById("ende").value = "";
+
+    return data;
 }
 
 function getDataFromLocalStorage(type){
@@ -75,9 +123,22 @@ function getNewId(){
 
 function update(type, id){ //Press edit button
  // daten holen und ändern und dann neu rein
-    let item = getDataFromLocalStorage(type);//Daten mit dem type aus local storage holen
-
+    let data = getItemById(getDataFromLocalStorage(type), id);//Daten mit dem type aus local storage holen und Elemente mit ID herausfiltern
+    
 }
+
+function setDropDownData(type){
+    let item = getDataFromLocalStorage(type);
+    let option;
+    item.array.forEach(element => {
+        option += '<option value="' + element.dozent + '" />'; //Dozent muss noch durch eine variabel ausgetauscht werden
+    });
+    document.getElementById('dlDozent').innerHTML = option;
+}
+
+function getItemById(dataArray, id){
+    return JSON.parse(dataArray.filter(item => {return item.id == id})[0]); //gibt uns die Daten mit der id
+  }
 
 function creatTable(type){
 
