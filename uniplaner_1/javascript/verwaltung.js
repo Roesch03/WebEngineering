@@ -76,13 +76,13 @@ function getDataVorlesung(){
     let data = {
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
-        kurs: document.getElementById("kurs").value,
-        dozent: document.getElementById("dozent").value
+        modul: document.getElementById("modul").value,
+        studiengang: document.getElementById("studiengang").value
     }
 
     document.getElementById("bezeichnung").value = "";
-    document.getElementById("kurs").value = "";
-    document.getElementById("dozent").value = "";
+    document.getElementById("modul").value = "";
+    document.getElementById("studiengang").value = "";
 
     return data;
 }
