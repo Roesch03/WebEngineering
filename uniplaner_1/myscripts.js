@@ -6,10 +6,7 @@ function onFormSubmitOld(){
         insertNewRecord(formData);
     else
         updateRecord(formData);
-
     clearInput();
-
-
     recetForm();
 }
 
@@ -31,13 +28,6 @@ function readFormData(){
     }
 }
 
-
-
-function savedData(type){
-    //var type = JSON.parse(localStorage.getItem('name'));
-
-}
-
 function insertNewRecord(data){
     var table = document.getElementById("lectureList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
@@ -48,7 +38,6 @@ function insertNewRecord(data){
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.dozent;
     cell3 = newRow.insertCell(3);
-    //change "submit-button edit-btn"
     cell3.innerHTML = '<a onClick="onEdit(this)" class="col" class="form-action-button"><button class="submit-button edit-btn" class ="hero" type="submit" value="Submit"><img src="assets/edit.png" width="25px"></button></a><a onClick="onDelete(this)" class="col" class="form-action-button"><button class="submit-button edit-btn" class ="hero" type="submit" value="Submit"><img src="assets/delete.png"width="25px"></button></a>'
 }
 
@@ -75,11 +64,9 @@ function updateRecord(formData){
 
 function onDelete(td){
     if(confirm('Are you sure ?')){
-
         row = td.parentElement.parentElement;
         document.getElementById("lectureList").deleteRow(row.rowIndex);
         resetFrom();
-
     }
 }
 

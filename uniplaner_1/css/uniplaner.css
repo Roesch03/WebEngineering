@@ -1,7 +1,6 @@
 /*****************************/
 /* Global styles             */
 /*****************************/
-/*test2*/
 :root {
     --blueberry: #4d678d;
     --apricot:#ef7c1d;
@@ -16,13 +15,22 @@
 
 html,
 body {
-   
   height: 100vh;
   width: 100%;  
  
 } 
+
 .spaceToBottom{
   height: 120px;
+}
+
+header {
+  display: block;
+  height: 0px;
+}
+
+main{
+  min-height: calc(100vh - 112px); /*body-footer*/
 }
 
 /***********************************************/
@@ -210,8 +218,12 @@ cursor: pointer;
 }
 
 footer{
+  display: block;
   background-color: var(--footer-color);
+  bottom: 0px;
+  height: 112px;
 }
+
 .footercontent{
   text-decoration: none;
   color: rgb(212, 218, 218);

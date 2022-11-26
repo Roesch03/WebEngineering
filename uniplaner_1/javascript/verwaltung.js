@@ -1,7 +1,6 @@
 
 function onFormSubmit(type) {
     dataHandler(type);
-
 }
 
 function dataHandler(type){
@@ -40,7 +39,7 @@ function getDataDozent(){
     document.getElementById("alter").value = "";
     document.getElementById("github").value = "";
 
-    return data
+    return data;
 
 }
 
@@ -122,7 +121,7 @@ function getNewId(){
 }
 
 function update(type, id){ //Press edit button
- // daten holen und ändern und dann neu rein
+    // daten holen und ändern und dann neu rein
     let data = getItemById(getDataFromLocalStorage(type), id);//Daten mit dem type aus local storage holen und Elemente mit ID herausfiltern
     
 }
@@ -141,5 +140,5 @@ function getItemById(dataArray, id){
   }
 
 function creatTable(type){
-
+    
 }
