@@ -7,6 +7,7 @@ function dataHandler(type){
     let data = getDataFromLocalStorage(type);
     data[data.length] = typeHandler(type);
     setDataToLocalStorage(type, data);
+    location.reload()
 }
 
 function typeHandler(type){
@@ -122,12 +123,6 @@ function getNewId(){
     return id;
 }
 
-function update(type, id){ //Press edit button
-    // daten holen und ändern und dann neu rein
-    let data = getItemById(getDataFromLocalStorage(type), id);//Daten mit dem type aus local storage holen und Elemente mit ID herausfiltern
-    
-}
-
 function setDropDownData(type){
     let item = getDataFromLocalStorage(type); //console.log vom item ausgebn und mit console debuggen
     let option;
@@ -141,6 +136,7 @@ function getItemById(dataArray, id){
     return JSON.parse(dataArray.filter(item => {return item.id == id})[0]); //gibt uns die Daten mit der id
   }
 
-function creatTable(type){
-    
-}
+ function onEdit(type, id){
+    let data = getItemById(getDataFromLocalStorage(type), id)
+
+ }
