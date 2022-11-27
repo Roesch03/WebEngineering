@@ -10,7 +10,7 @@ window.addEventListener("load", function (){
 
     for(item of data){
         HTML += "<tr><td>"+item.bezeichnung+"</td>"
-        HTML += "<td>"+item.studiengangsleiter+"</td>"
+        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), item.studiengangsleiter).name+"</td>"
         HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
     }
 
@@ -30,9 +30,9 @@ function setSelcetionDozent(){
     let data = getDataFromLocalStorage('dozent')
     console.log(data)
     var HTML = ""
-    console.log("select data: " + data)
-    for(time of data){
-        HTML += "<option value=" + item.id + ">" + item.dozent + "</option>";
+    for(item of data){
+        console.log(item.name)
+        HTML += "<option value=" + item.id + ">" + item.name + "</option>";
     }
     document.getElementById("selcetDozent").innerHTML = HTML;
 }

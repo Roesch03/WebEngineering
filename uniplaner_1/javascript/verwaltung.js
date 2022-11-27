@@ -49,12 +49,10 @@ function getDataStudiengang(){
     let data = {
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
-        studiengangsleiter: document.getElementById("studiengangsleiter").value
+        studiengangsleiter: document.getElementById("selcetDozent").value
     }
 
     document.getElementById("bezeichnung").value = "";
-    document.getElementById("studiengangsleiter").value = "";
-
     return data;
 }
 
@@ -134,7 +132,12 @@ function setDropDownData(type){ // wird derzeit nicht benötigt
 }
 
 function getItemById(dataArray, id){
-    return JSON.parse(dataArray.filter(item => {return item.id == id})[0]); //gibt uns die Daten mit der id
+    //return JSON.parse(dataArray.filter(item => {return item.id == id})[0]); //gibt uns die Daten mit der id
+    for(item of dataArray){
+        if(item.id == id){
+            return item
+        }
+    }return {name: "error"}
   }
 
  function onEdit(type, id){
