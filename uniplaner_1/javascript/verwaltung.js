@@ -60,12 +60,11 @@ function getDataSemester(){
     let data = {
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
-        studiengang: document.getElementById("studiengang").value,
+        studiengang: document.getElementById("selectStudiengang2").value,
         datum: document.getElementById("datum").value
     }
 
     document.getElementById("bezeichnung").value = "";
-    document.getElementById("studiengang").value = "";
     document.getElementById("datum").value = "";
 
     return data;

@@ -10,7 +10,7 @@ window.addEventListener("load", function (){
 
     for(item of data){
         HTML += "<tr><td>"+item.bezeichnung+"</td>"
-        HTML += "<td>"+item.studiengang+"</td>"
+        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), item.studiengangsleiter).name+"</td>"
         HTML += "<td>"+item.datum+"</td>"
         HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
     }
@@ -22,4 +22,16 @@ window.addEventListener("load", function (){
     }
 
     document.getElementById("tableSemester").innerHTML = HTML;
+    setSelcetionStudiengang()
 });
+
+function setSelcetionStudiengang(){
+    let data = getDataFromLocalStorage('studiengang')
+    console.log(data)
+    var HTML = ""
+    for(item of data){
+        console.log(item.bezeichnung)
+        HTML += "<option value=" + item.id + ">" + item.bezeichnung + "</option>";
+    }
+    document.getElementById("selectStudiengang2").innerHTML = HTML;
+}
