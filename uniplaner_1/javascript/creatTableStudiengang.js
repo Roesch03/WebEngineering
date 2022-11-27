@@ -9,10 +9,15 @@ window.addEventListener("load", function (){
 
 
     for(item of data){
-        HTML += "<tr><td align=center>"+item.bezeichnung+"</td>"
-        HTML += "<td align=center>"+item.studiengangsleiter+"</td></tr>"
+        HTML += "<tr><td>"+item.bezeichnung+"</td>"
+        HTML += "<td>"+item.studiengangsleiter+"</td></tr>"
     }
 
     HTML += "</table>";
+
+    if(data==null){
+        HTML = "Keine Einträge"
+    }
+    
     document.getElementById("tableStudiengang").innerHTML = HTML;
 });
