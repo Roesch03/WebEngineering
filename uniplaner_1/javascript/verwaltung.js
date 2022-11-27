@@ -89,13 +89,12 @@ function getDataVorlesung(){
 function getDataVorlesungstermin(){
     let data = {
         id: getNewId(),
-        vorlesung: document.getElementById("vorlesung").value,
+        vorlesung: document.getElementById("selectVorlesung").value,
         datum: document.getElementById("datum").value,
         start: document.getElementById("start").value,
         ende: document.getElementById("ende").value
     }
 
-    document.getElementById("vorlesung").value = "";
     document.getElementById("datum").value = "";
     document.getElementById("start").value = "";
     document.getElementById("ende").value = "";

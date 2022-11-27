@@ -7,10 +7,12 @@ window.addEventListener("load", function (){
 
     var HTML = "<table border=1 width=100%><tr><th>Vorlesung</th><th>Datum</th><th>Start</th><th>Ende</th></tr>";
 
-
+    console.log(data)
     for(item of data){
-        HTML += "<tr><td>"+item.vorlesung+"</td>"
-        HTML += "<td>"+item.datum+"</td>"
+        console.log(item.vorlesung)
+        console.log(item.datum)
+        HTML += "<tr><td>"+getItemById(getDataFromLocalStorage("vorlesung"), item.vorlesung).bezeichnung+"</td>"
+        HTML += "<td>" + item.datum + "</td>"
         HTML += "<td>"+item.start+"</td>"
         HTML += "<td>"+item.ende+"</td>"
         HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
@@ -23,4 +25,16 @@ window.addEventListener("load", function (){
     }
 
     document.getElementById("tableVorlesungstermine").innerHTML = HTML;
+    setSelcetionvorlesung()
 });
+
+function setSelcetionvorlesung(){
+    let data = getDataFromLocalStorage('vorlesung')
+    console.log(data)
+    var HTML = ""
+    for(item of data){
+        console.log(item.bezeichnung)
+        HTML += "<option value=" + item.id + ">" + item.bezeichnung + "</option>";
+    }
+    document.getElementById("selectVorlesung").innerHTML = HTML;
+}
