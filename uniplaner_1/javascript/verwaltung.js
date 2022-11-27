@@ -4,8 +4,8 @@ function onFormSubmit(type) {
 }
 
 function dataHandler(type){
-    let data = typeHandler(type);
-    data[data.length] = getDataFromInput();
+    let data = getDataFromLocalStorage(type);
+    data[data.length] = typeHandler(type);
     setDataToLocalStorage(type, data);
 }
 
@@ -26,6 +26,7 @@ function typeHandler(type){
 }
 
 function getDataDozent(){
+    console.log("getDataDozent");
     let data = {
         id: getNewId(),
         name: document.getElementById("name").value,
@@ -44,6 +45,7 @@ function getDataDozent(){
 }
 
 function getDataStudiengang(){
+    console.log("getDataStudiengang")
     let data = {
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
@@ -114,7 +116,7 @@ function setDataToLocalStorage(type, data){
 
 
 function getNewId(){
-    let id = getDataFromInput("id");
+    let id = getDataFromLocalStorage("id");
     id++;
     setDataToLocalStorage("id", id);
     return id;
@@ -127,7 +129,7 @@ function update(type, id){ //Press edit button
 }
 
 function setDropDownData(type){
-    let item = getDataFromLocalStorage(type);
+    let item = getDataFromLocalStorage(type); //console.log vom item ausgebn und mit console debuggen
     let option;
     item.array.forEach(element => {
         option += '<option value="' + element.dozent + '" />'; //Dozent muss noch durch eine variabel ausgetauscht werden
