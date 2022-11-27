@@ -11,9 +11,15 @@ window.addEventListener("load", function (){
     for(item of data){
         HTML += "<tr><td>"+item.bezeichnung+"</td>"
         HTML += "<td>"+item.studiengang+"</td>"
-        HTML += "<td>"+item.datum+"</td></tr>"
+        HTML += "<td>"+item.datum+"</td>"
+        HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
     }
 
     HTML += "</table>";
+    console.log(data.length)
+    if(data.length==0){
+        HTML = "<h2>Noch keine Einträge</h2>"
+    }
+
     document.getElementById("tableSemester").innerHTML = HTML;
 });

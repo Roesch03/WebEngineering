@@ -10,14 +10,17 @@ window.addEventListener("load", function (){
 
     for(item of data){
         HTML += "<tr><td>"+item.bezeichnung+"</td>"
-        HTML += "<td>"+item.studiengangsleiter+"</td></tr>"
+        HTML += "<td>"+item.studiengangsleiter+"</td>"
+        HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
     }
 
     HTML += "</table>";
 
-    if(data==null){
-        HTML = "Keine Einträge"
+
+    console.log(data.length)
+    if(data.length==0){
+        HTML = "<h2>Noch keine Einträge</h2>"
     }
-    
+
     document.getElementById("tableStudiengang").innerHTML = HTML;
 });
