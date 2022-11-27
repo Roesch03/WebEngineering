@@ -1,4 +1,3 @@
-
 function onFormSubmit(type) {
     dataHandler(type);
 }
@@ -79,11 +78,13 @@ function getDataVorlesung(){
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
         modul: document.getElementById("modul").value,
+        dauer: document.getElementById("dauer").value,
         studiengang: document.getElementById("studiengang").value
     }
 
     document.getElementById("bezeichnung").value = "";
     document.getElementById("modul").value = "";
+    document.getElementById("dauer").value = "";
     document.getElementById("studiengang").value = "";
 
     return data;
