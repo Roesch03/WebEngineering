@@ -124,7 +124,7 @@ function getNewId(){
     return id;
 }
 
-function setDropDownData(type){
+function setDropDownData(type){ // wird derzeit nicht benötigt
     let item = getDataFromLocalStorage(type); //console.log vom item ausgebn und mit console debuggen
     let option;
     item.array.forEach(element => {

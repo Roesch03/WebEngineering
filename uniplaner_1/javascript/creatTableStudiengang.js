@@ -23,4 +23,16 @@ window.addEventListener("load", function (){
     }
 
     document.getElementById("tableStudiengang").innerHTML = HTML;
+    setSelcetionDozent()
 });
+
+function setSelcetionDozent(){
+    let data = getDataFromLocalStorage('dozent')
+    console.log(data)
+    var HTML = ""
+    console.log("select data: " + data)
+    for(time of data){
+        HTML += "<option value=" + item.id + ">" + item.dozent + "</option>";
+    }
+    document.getElementById("selcetDozent").innerHTML = HTML;
+}
