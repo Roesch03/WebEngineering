@@ -16,7 +16,7 @@ window.addEventListener("load", function (){
         HTML += "<tr><td>"+element.bezeichnung+"</td>"
         HTML += "<td>"+getItemById(getDataFromLocalStorage("studiengang"), element.studiengang).bezeichnung+"</td>"
         HTML += "<td>"+newDatum+"</td>"
-        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${newID})"></tr>`
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px" onclick="editSemester(${newID})"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${newID})"></tr>`
     }
 
     HTML += "</table>";
@@ -38,4 +38,22 @@ function setSelcetionStudiengang(){
         HTML += "<option value=" + item.id + ">" + item.bezeichnung + "</option>";
     }
     document.getElementById("selectStudiengang2").innerHTML = HTML;
+}
+
+function editSemester(id){
+    console.log("editSemester")
+    let data = getDataFromLocalStorage('semester')
+    let editElement = "No data found"
+    for(item of data){
+        if(item.id == id){
+            editElement = item
+        }
+    }
+    document.getElementById("bezeichnung").value = editElement.bezeichnung
+    document.getElementById("datum").value = editElement.datum
+    //delet old object
+    let dataType = 'semester'
+    console.log("delete: " + dataType + id);
+    let newData = getDataFromLocalStorage(dataType)
+    setDataToLocalStorage(dataType, newData.filter(item => {return item.id!=id}))
 }
