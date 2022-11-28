@@ -2,7 +2,7 @@ window.addEventListener("load", function (){
 
     console.log("create Table Studiengang")
 
-    let type = "studiengang"
+    let type = 'studiengang'
 
     let data = getDataFromLocalStorage(type)
     console.log(data)
@@ -12,9 +12,9 @@ window.addEventListener("load", function (){
 
     for(item of data){
         let element = item.id
-        HTML += "<tr id='"+ element.id +"'><td>"+element.bezeichnung+"</td>"
-        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), element.studiengangsleiter).name+"</td>"
-        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
+        HTML += "<tr id='"+ item.id +"'><td>"+item.bezeichnung+"</td>"
+        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), item.studiengangsleiter).name+"</td>"
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${item.id})"></tr>`
     }
 
     HTML += "</table>";

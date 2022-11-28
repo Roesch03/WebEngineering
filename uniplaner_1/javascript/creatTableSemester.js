@@ -11,10 +11,12 @@ window.addEventListener("load", function (){
 
 
     for(element of data){
+        let newID = element.id
+        let newDatum = element.datum
         HTML += "<tr><td>"+element.bezeichnung+"</td>"
-        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), element.studiengangsleiter).name+"</td>"
-        HTML += "<td>"+element.datum+"</td>"
-        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
+        HTML += "<td>"+getItemById(getDataFromLocalStorage("studiengang"), element.studiengang).bezeichnung+"</td>"
+        HTML += "<td>"+newDatum+"</td>"
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${newID})"></tr>`
     }
 
     HTML += "</table>";

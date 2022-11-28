@@ -16,7 +16,7 @@ window.addEventListener("load", function (){
         HTML += "<td>" + element.datum + "</td>"
         HTML += "<td>"+element.start+"</td>"
         HTML += "<td>"+element.ende+"</td>"
-        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${newId})"></tr>`
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
     }
 
     HTML += "</table>";
