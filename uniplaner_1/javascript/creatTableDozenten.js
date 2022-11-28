@@ -2,18 +2,21 @@ window.addEventListener("load", function (){
 
     console.log("create Table Dozenten")
 
-    let data = getDataFromLocalStorage('dozent')
+    let type = 'dozent'
+
+    let data = getDataFromLocalStorage(type)
     console.log(data)
 
     var HTML = "<table border=1 width=100%><tr><th>Name</th><th>Email</th><th>Alter</th><th>GitHub</th></tr>";
 
 
-    for(item of data){
-        HTML += "<tr><td>"+item.name+"</td>"
-        HTML += "<td>"+item.email+"</td>"
-        HTML += "<td>"+item.alter+"</td>"
-        HTML += "<td>"+item.github+"</td>"
-        HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
+    for(element of data){
+        console.log(element.name)
+        HTML += "<tr><td>"+element.name+"</td>"
+        HTML += "<td>"+element.email+"</td>"
+        HTML += "<td>"+element.alter+"</td>"
+        HTML += "<td>"+element.github+"</td>"
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
     }
 
     HTML += "</table>";

@@ -6,7 +6,7 @@ function dataHandler(type){
     let data = getDataFromLocalStorage(type);
     data[data.length] = typeHandler(type);
     setDataToLocalStorage(type, data);
-    location.reload()
+    window.location.reload();
 }
 
 function typeHandler(type){
@@ -140,4 +140,12 @@ function getItemById(dataArray, id){
  function onEdit(type, id){
     let data = getItemById(getDataFromLocalStorage(type), id)
 
+ }
+
+ function onDeletData(dataType, id){
+    console.log("delete: " + dataType + id);
+    let data = getDataFromLocalStorage(dataType)
+    console.log(data.filter(item => {return item.id==id}))
+    setDataToLocalStorage(dataType, data.filter(item => {return item.id!=id}))
+    location.reload()
  }

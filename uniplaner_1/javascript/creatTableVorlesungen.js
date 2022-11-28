@@ -2,18 +2,20 @@ window.addEventListener("load", function (){
 
     console.log("create Table Vorlesungen")
 
-    let data = getDataFromLocalStorage('vorlesung')
+    let type = 'vorlesung'
+
+    let data = getDataFromLocalStorage(type)
     console.log(data)
 
     var HTML = "<table border=1 width=100%><tr><th>Bezeichnung</th><th>Modul</th><th>Dauer</th><th>Studiengang</th></tr>";
 
 
-    for(item of data){
-        HTML += "<tr><td>"+item.bezeichnung+"</td>"
-        HTML += "<td>"+item.modul+"</td>"
-        HTML += "<td>"+item.dauer+"</td>"
-        HTML += "<td>"+getItemById(getDataFromLocalStorage("studiengang"), item.studiengang).bezeichnung+"</td>"
-        HTML += "<td scope='col'><img src='assets/edit.png' width='25px'></button><img src='assets/delete.png'width='25px'></button></tr>"
+    for(element of data){
+        HTML += "<tr><td>"+element.bezeichnung+"</td>"
+        HTML += "<td>"+element.modul+"</td>"
+        HTML += "<td>"+element.dauer+"</td>"
+        HTML += "<td>"+getItemById(getDataFromLocalStorage("studiengang"), element.studiengang).bezeichnung+"</td>"
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
     }
 
     HTML += "</table>";
