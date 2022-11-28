@@ -10,11 +10,10 @@ window.addEventListener("load", function (){
     var HTML = "<table border=1 width=100%><tr><th>Bezeichnung</th><th>Studiengangsleiter</th></tr>";
 
 
-    for(item of data){
-        let element = item.id
-        HTML += "<tr id='"+ item.id +"'><td>"+item.bezeichnung+"</td>"
-        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), item.studiengangsleiter).name+"</td>"
-        HTML += `<td scope="col"><img src="assets/edit.png" width="25px" onclick="editStudiengang(${element})"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${item.id})"></tr>`
+    for(element of data){
+        HTML += "<tr><td>"+element.bezeichnung+"</td>"
+        HTML += "<td>"+getItemById(getDataFromLocalStorage("dozent"), element.studiengangsleiter).name+"</td>"
+        HTML += `<td scope="col"><img src="assets/edit.png" width="25px" onclick="editStudiengang(${element.id})"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
     }
 
     HTML += "</table>";

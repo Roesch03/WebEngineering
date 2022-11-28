@@ -147,12 +147,7 @@ function getItemById(dataArray, id){
         console.log("delete: " + dataType + id);
         let data = getDataFromLocalStorage(dataType)
         setDataToLocalStorage(dataType, data.filter(item => {return item.id!=id}))
-        //location.reload()
+        location.reload()
     }
  }
 
- function onDeletEditData(dataType, id){
-    console.log("delete: " + dataType + id);
-    let data = getDataFromLocalStorage(dataType)
-    setDataToLocalStorage(dataType, data.filter(item => {return item.id!=id}))
- }
