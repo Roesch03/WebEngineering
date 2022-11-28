@@ -49,11 +49,13 @@
     <div class="container-2">
       <div class="item item-1">
         <img src="assets/person-icon-1.png">
+        <select id="dashboardDozent" oninput="loadDashboard()">
+        </select>
       </div>
       <div class="item item-2">
-        <a>Website:</a><br><hr>
-        <a>YouTube:</a><br><hr>
-        <a>Github:</a><br><hr>
+        <a id="website">Website:</a><br><hr>
+        <a id="youtube">YouTube:</a><br><hr>
+        <a id="github">Github:</a><br><hr>
         <a>Instagram:</a><br>
       </div>
       <div class="item item-3"><h2>Studiengänge</h2>
@@ -65,7 +67,7 @@
               <th scope="col">Name</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="studiengangDozent">
             <tr>
               <th scope="row">1</th>
               <td>...</td>
@@ -148,5 +150,7 @@
   <script src="myscripts.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="javascript/dashboard.js"></script>
+  <script src="javascript/verwaltung.js"></script>
 </body>
 </html>
