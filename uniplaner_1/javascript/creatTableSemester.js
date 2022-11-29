@@ -7,7 +7,7 @@ window.addEventListener("load", function (){
     let data = getDataFromLocalStorage(type)
     console.log(data)
 
-    var HTML = "<table border=1 width=100% class='table'><tr><th>Bezeichnung</th><th>Studiengang</th><th>Datum</th></tr>";
+    var HTML = "<table border=0 width=100% class='table'><tr><th>Bezeichnung</th><th>Studiengang</th><th>Datum</th></tr>";
 
 
     for(element of data){

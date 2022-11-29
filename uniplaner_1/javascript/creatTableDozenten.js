@@ -7,7 +7,7 @@ window.addEventListener("load", function (){
     let data = getDataFromLocalStorage(type)
     console.log(data)
 
-    var HTML = "<table border=1 width=100% class='table'><tr><th>Name</th><th>Email</th><th>Alter</th><th>GitHub</th></tr>";
+    var HTML = "<table border=0 width=100% class='table'><tr><th>Name</th><th>Email</th><th>Alter</th><th>GitHub</th></tr>";
 
 
     for(element of data){
@@ -22,7 +22,7 @@ window.addEventListener("load", function (){
     HTML += "</table>";
     console.log(data.length)
     if(data.length==0){
-        HTML = "<h2>Noch keine Einträge</h2>"
+        HTML = "<h3>Noch keine Einträge</h3>"
     }
 
     document.getElementById("tableDozenten").innerHTML = HTML;
