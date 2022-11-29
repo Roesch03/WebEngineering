@@ -22,7 +22,7 @@ window.addEventListener("load", function (){
     HTML += "</table>";
     console.log(data.length)
     if(data.length==0){
-        HTML = "<h2>Noch keine Einträge</h2>"
+        HTML = "<h3 class='text-center p-2'>Noch keine Einträge</h3>"
     }
 
     document.getElementById("tableSemester").innerHTML = HTML;
