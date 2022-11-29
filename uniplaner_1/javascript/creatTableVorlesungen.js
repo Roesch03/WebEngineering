@@ -7,7 +7,7 @@ window.addEventListener("load", function (){
     let data = getDataFromLocalStorage(type)
     console.log(data)
 
-    var HTML = "<table border=1 width=100%><tr><th>Bezeichnung</th><th>Modul</th><th>Dauer</th><th>Studiengang</th></tr>";
+    var HTML = "<table border=1 width=100% class='table'><tr><th>Bezeichnung</th><th>Modul</th><th>Dauer</th><th>Studiengang</th></tr>";
 
 
     for(element of data){
@@ -26,6 +26,7 @@ window.addEventListener("load", function (){
 
     document.getElementById("tableVorlesung").innerHTML = HTML;
     setSelcetionStudiengang();
+    styleTable(document.getElementById("tableVorlesung"))
 });
 
 function setSelcetionStudiengang(){

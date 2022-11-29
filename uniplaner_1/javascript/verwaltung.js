@@ -151,3 +151,8 @@ function getItemById(dataArray, id){
     }
  }
 
+ function styleTable(element){
+    element.style.borderRadius = "20px";
+    element.style.boxShadow= "0 4px 15px -2px gray";
+}
+

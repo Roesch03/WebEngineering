@@ -1,5 +1,5 @@
 window.addEventListener("load", function (){
-    getElementById("dashboardDozent").addEventListener('input', ()=> {loadDashboard()});
+    document.getElementById("dashboardDozent").addEventListener('input', ()=> {loadDashboard()});
 
 
     console.log("test")
@@ -19,6 +19,7 @@ function setSelectDashboardDozent(){
 }
 
 function loadDashboard(){
+    //select Dozent
     let studiengangDozent = document.getElementById("studiengangDozent")
     console.log("loadDashboard")
     let data = getDataFromLocalStorage("dozent")
@@ -32,13 +33,14 @@ function loadDashboard(){
         }
     }
 
+    //print first data
     console.log(editElement.name)
     let text = "Youtube: https://youtube.de/" + editElement.name
     document.getElementById("website").innerText ="Website: wwww." + editElement.name + ".de"
     document.getElementById("github").innerText = "GitHub: www.github/" + editElement.github + ".de"
     document.getElementById("youtube").innerText ="YouTube: www.youtube/" + editElement.name + ".de"
 
-
+    //print Studiengänge
     let studiengangData = getDataFromLocalStorage("studiengang")
     let studiengangText = ""
     var counter = 0
@@ -50,8 +52,8 @@ function loadDashboard(){
             counter++
         }
     }
-
-    console.log(studiengangText)
-
     studiengangDozent.innerHTML = studiengangText
+
+    //print Vorlesungen
+    
 }

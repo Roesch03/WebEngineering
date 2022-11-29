@@ -7,7 +7,7 @@ window.addEventListener("load", function (){
     let data = getDataFromLocalStorage(type)
     console.log(data)
 
-    var HTML = "<table border=1 width=100%><tr><th>Name</th><th>Email</th><th>Alter</th><th>GitHub</th></tr>";
+    var HTML = "<table border=1 width=100% class='table'><tr><th>Name</th><th>Email</th><th>Alter</th><th>GitHub</th></tr>";
 
 
     for(element of data){
@@ -26,6 +26,7 @@ window.addEventListener("load", function (){
     }
 
     document.getElementById("tableDozenten").innerHTML = HTML;
+    styleTable(document.getElementById("tableDozenten"))
 });
 
 function editDozent(id){
