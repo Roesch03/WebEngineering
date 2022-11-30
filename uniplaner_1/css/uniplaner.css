@@ -403,16 +403,7 @@ nav.nav-tabs.text-center{
   }
 }
 
-
-
-/*TEST*/
-
-/*****************************/
-/* design navbar             */
-/*****************************/
-
-/* navbar left sidebar */
-
+/*TEST Anna*/
 /*
 .sidebar {  
   padding: 1rem!important;  
@@ -431,7 +422,6 @@ sidebar-list{
   flex-direction: column; 
 }
 
-
 .nav-link {
   display: block;
   padding: .5rem 1rem;
@@ -440,29 +430,20 @@ sidebar-list{
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
-
-
 .nav-pills .nav-link {
   color: var(--primary-color)
 }
-
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: var(--light-grey)!important;
   background-color: var(--primary-color)!important;
 }
 
-
-
-
 .sidebar-icon {
   color: rgb(201, 32, 139);
   font-size: 1rem;
 }
-*/
 
-/* links in Navigation bar */
-/*
 nav a {
   color: white !important;
 }
@@ -484,16 +465,7 @@ nav a {
   color: var(--light-grey)!important;
   background-color: var(--primary-color)!important;
 }
-*/
 
-/* end sidebar nav */
-
-
-/*****************************/
-/* design homepage           */
-/*****************************/
-/* Abstände Titel von Sections: padding-top & padding-bottom: 100px */
-/*
 .wrapper {
   height: 90%;   
   display: flex;
@@ -540,27 +512,16 @@ nav a {
     display: flex;
     flex-direction: column;
   } 
-  */
 
-  /* margin-bottom maximieren */
-  /*
   .max-margin-bottom{
     margin-bottom: auto!important;
   }
 
   aside{
     margin: 30px;
-  }*/
-  
-  
-  
+  }
 
-/*****************************/
-/* Design Bootstrap Elemente */
-/*****************************/
-/* Bootstrap Buttons */
-/*
-.btn-primary, .btn-primary:focus {
+.btc:\Users\aipsk\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.htmln-primary, .btn-primary:focus {
     color: white;
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);    
@@ -570,13 +531,8 @@ nav a {
     color: white;
     background-color: var(--secondary-hover-color);
     border: 1px solid var(--secondary-hover-color);
-}*/
+}
 
-
-/*****************************/
-/* Media queries             */
-/*****************************/
-/*
 @media (min-width: 992px) {
   .sidebar {
       width: 350px;
@@ -584,13 +540,12 @@ nav a {
   }
   
 }
-*/
-/* Small devices (landscape phones, 576px and up) */
-/*
+
 @media (max-width: 576px) {   
   .settings{
     display: none;
   }  
- }*/
+ }
+ */
 
  
