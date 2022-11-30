@@ -2,30 +2,30 @@ function onFormSubmit(type) {
     dataHandler(type);
 }
 
-function dataHandler(type){
+function dataHandler(type) {
     let data = getDataFromLocalStorage(type);
     data[data.length] = typeHandler(type);
     setDataToLocalStorage(type, data);
     window.location.reload();
 }
 
-function typeHandler(type){
-    if (type==='dozent') {
+function typeHandler(type) {
+    if (type === 'dozent') {
         return getDataDozent();
-    }if (type==='semester') {
+    } if (type === 'semester') {
         return getDataSemester();
-    }if (type==='vorlesung'){
+    } if (type === 'vorlesung') {
         return getDataVorlesung();
-    }if (type==='vorlesungstermin'){
+    } if (type === 'vorlesungstermin') {
         return getDataVorlesungstermin();
-    }if (type==='studiengang'){
+    } if (type === 'studiengang') {
         return getDataStudiengang();
-    }else{
+    } else {
         null
     }
 }
 
-function getDataDozent(){
+function getDataDozent() {
     console.log("getDataDozent");
     let data = {
         id: getNewId(),
@@ -44,7 +44,7 @@ function getDataDozent(){
 
 }
 
-function getDataStudiengang(){
+function getDataStudiengang() {
     console.log("getDataStudiengang")
     let data = {
         id: getNewId(),
@@ -56,7 +56,7 @@ function getDataStudiengang(){
     return data;
 }
 
-function getDataSemester(){
+function getDataSemester() {
     let data = {
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
@@ -70,7 +70,7 @@ function getDataSemester(){
     return data;
 }
 
-function getDataVorlesung(){
+function getDataVorlesung() {
     let data = {
         id: getNewId(),
         bezeichnung: document.getElementById("bezeichnung").value,
@@ -86,7 +86,7 @@ function getDataVorlesung(){
     return data;
 }
 
-function getDataVorlesungstermin(){
+function getDataVorlesungstermin() {
     let data = {
         id: getNewId(),
         vorlesung: document.getElementById("selectVorlesung").value,
@@ -102,24 +102,24 @@ function getDataVorlesungstermin(){
     return data;
 }
 
-function getDataFromLocalStorage(type){
+function getDataFromLocalStorage(type) {
     let item = localStorage.getItem(type)
     return item ? JSON.parse(item) : [];
 }
 
-function setDataToLocalStorage(type, data){
+function setDataToLocalStorage(type, data) {
     localStorage.setItem(type, JSON.stringify(data));
 }
 
 
-function getNewId(){
+function getNewId() {
     let id = getDataFromLocalStorage("id");
     id++;
     setDataToLocalStorage("id", id);
     return id;
 }
 
-function setDropDownData(type){ // wird derzeit nicht benötigt
+function setDropDownData(type) { // wird derzeit nicht benötigt
     let item = getDataFromLocalStorage(type); //console.log vom item ausgebn und mit console debuggen
     let option;
     item.array.forEach(element => {
@@ -128,26 +128,32 @@ function setDropDownData(type){ // wird derzeit nicht benötigt
     document.getElementById('dlDozent').innerHTML = option;
 }
 
-function getItemById(dataArray, id){
+function getItemById(dataArray, id) {
     //return JSON.parse(dataArray.filter(item => {return item.id == id})[0]); //gibt uns die Daten mit der id
-    for(item of dataArray){
-        if(item.id == id){
+    for (item of dataArray) {
+        if (item.id == id) {
             return item
         }
-    }return {name: "error"}
-  }
+    } return { name: "error" }
+}
 
- function onEdit(type, id){
+function onEdit(type, id) {
     let data = getItemById(getDataFromLocalStorage(type), id)
 
- }
+}
 
- function onDeletData(dataType, id){
-    if(confirm('Möchtest du das Element löschen?')){           
+function onDeletData(dataType, id) {
+    if (confirm('Möchtest du das Element löschen?')) {
         console.log("delete: " + dataType + id);
         let data = getDataFromLocalStorage(dataType)
-        setDataToLocalStorage(dataType, data.filter(item => {return item.id!=id}))
+        setDataToLocalStorage(dataType, data.filter(item => { return item.id != id }))
         location.reload()
     }
- }
+}
+
+function styleTable(element) {
+    element.style.borderRadius = "20px";
+    element.style.boxShadow = "0 4px 15px -2px gray";
+    element.style.border = "none";
+}
 

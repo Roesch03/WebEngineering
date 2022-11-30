@@ -7,7 +7,7 @@ window.addEventListener("load", function (){
     let data = getDataFromLocalStorage(type)
     console.log(data)
 
-    var HTML = "<table border=1 width=100%><tr><th>Bezeichnung</th><th>Studiengang</th><th>Datum</th></tr>";
+    var HTML = "<table border=0 width=100% class='table'><tr><th>Bezeichnung</th><th>Studiengang</th><th>Datum</th></tr>";
 
 
     for(element of data){
@@ -22,11 +22,12 @@ window.addEventListener("load", function (){
     HTML += "</table>";
     console.log(data.length)
     if(data.length==0){
-        HTML = "<h2>Noch keine Einträge</h2>"
+        HTML = "<h3 class='text-center p-2'>Noch keine Einträge</h3>"
     }
 
     document.getElementById("tableSemester").innerHTML = HTML;
     setSelcetionStudiengang()
+    styleTable(document.getElementById("tableSemester"))
 });
 
 function setSelcetionStudiengang(){
