@@ -310,10 +310,15 @@ input[type=text] {
   }
 }
 .col{
+  margin: 10px;
   text-align: center;
+  min-width: 200px;
 }
 label{
   text-align: left;
+}
+select, label{
+  display: block;
 }
 input, label {
   display: block;
