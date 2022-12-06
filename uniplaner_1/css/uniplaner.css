@@ -310,7 +310,7 @@ input[type=text] {
   }
 }
 select{
-  min-width: 200px;
+  min-width: 180px;
 }
 .col{
   margin: 10px;
