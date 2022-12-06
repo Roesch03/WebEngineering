@@ -293,6 +293,10 @@ input[type=text] {
 #editImg:hover {
   cursor: pointer;
 }
+.nav.nav-tabs.text-center{
+  
+  display: block;
+}
 
 /*noch zu ergänzen (Anna)*/
 @media (max-width:1000px) {

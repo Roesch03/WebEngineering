@@ -152,8 +152,9 @@ function onDeletData(dataType, id) {
 }
 
 function styleTable(element) {
+    element.style.padding = "10px"
     element.style.borderRadius = "20px";
-    element.style.boxShadow = "0 4px 15px -2px gray";
+    element.style.boxShadow = "0 8px 24px -2px lightgrey";
     element.style.border = "none";
 }
 
