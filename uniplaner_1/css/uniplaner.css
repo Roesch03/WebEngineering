@@ -3,7 +3,7 @@
 /*****************************/
 :root {
   --blueberry: #4d678d;
-  --apricot: #ef7c1d;
+  --apricot: #F7C331;
   --citrus: #F7C331;
   --appleCore: #dbbc91;
   --hover-color: rgb(206, 147, 216, 1);
@@ -308,6 +308,9 @@ input[type=text] {
     display: flex;
     flex-direction: column;
   }
+}
+select{
+  min-width: 200px;
 }
 .col{
   margin: 10px;
