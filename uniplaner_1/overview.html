@@ -85,20 +85,22 @@
 					<tr>
 						<td>
 							<div class="container">
-								<form onsubmit="event.preventDefault();onFormSubmit('studiengang');">
+								<form onsubmit="event.preventDefault();onFormSubmit('studiengang');" class="form_eintraege">
 									<div class="row">
 										<div class="col">
 											<label>Bezeichnung:</label>
 											<input type="text" name="bezeichnung" id="bezeichnung">
 										</div>
-										<div>
+										<div class="col">
 											<label>Studiengangsleiter:</label>
 											<select id="selcetDozent"></select>
 										</div>
-										<div class="col" class="form-action-button">
-											<button class="submit-button" clas="hero" type="submit" value="Submit">+
-												Hinzufügen</button>
-										</div>
+
+											<div class="col" class="form-action-button">
+												<button class="submit-button" clas="hero" type="submit" value="Submit">+
+													Hinzufügen</button>
+												</div>
+											
 									</div>
 								</form>
 							</div>

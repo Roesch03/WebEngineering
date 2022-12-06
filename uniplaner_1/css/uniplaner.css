@@ -302,6 +302,21 @@ input[type=text] {
     display: flex;
     flex-direction: column;
   }
+  .form_eintraege{
+    height: 100%;  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.col{
+  text-align: center;
+}
+label{
+  text-align: left;
+}
+input, label {
+  display: block;
 }
 
 nav.nav-tabs.text-center{
