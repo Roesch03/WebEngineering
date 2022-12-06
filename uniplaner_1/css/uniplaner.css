@@ -298,7 +298,6 @@ input[type=text] {
   display: block;
 }
 
-/*noch zu ergänzen (Anna)*/
 @media (max-width:1000px) {
   .nav.nav-tabs.text-center{
     height: 100%;  
@@ -445,7 +444,7 @@ nav.nav-tabs.text-center{
 }
 
 /*TEST Anna*/
- /**/
+ /*
 .sidebar {  
   padding: 1rem!important;  
   display: flex;
@@ -588,7 +587,7 @@ nav a {
   }  
  }
  
- /**/
+ */
 
  
 /*************************/
