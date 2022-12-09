@@ -235,6 +235,11 @@ section {
   color: var(--light-grey);
 }
 
+.img-fluid {
+  max-height: 270px;
+  height: auto;
+}
+
 /*****************************/
 /* Design Bootstrap Elemente */
 /*****************************/
