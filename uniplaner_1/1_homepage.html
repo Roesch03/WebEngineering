@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1"/>
   <title>Vorlesungsplaner</title>
-  <link rel="shortcut icon" href="assets/hat.png" /> 
+  <link rel="shortcut icon" href="assets/hat.png"> 
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/uniplaner.css">  
@@ -15,7 +17,7 @@
     <nav id="nav" class="navbar navbar-dark bg-primary navbar-expand-lg navbar-custom fixed-top">
       <div class="container">
       <a class="navbar-brand" href="1_homepage.html">
-        <img class="navlogo" src="assets/uniplan-light-big.png" height="100" sizes="60">
+        <img class="navlogo" src="assets/uniplan-light-big.png" height="100" sizes="60" alt="">
       </a>
       <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,7 +43,7 @@
             <a class="nav-link" href="#impressum">Impressum</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="assets/login_img.jpg"></a>
+            <a class="nav-link" href="#"><img src="assets/login_img.jpg" alt=""></a>
           </li>
         </ul>       
       </div>
@@ -61,7 +63,12 @@
       <div class="carousel-caption d-flex flex-column justify-content-center h-100"> <!--d-none-->
         <h1 class="secon text-shadow">Administrieren von Studiengängen</h1>
         <p class="minimal">Die DHBW bietet mit ihrem breiten Studienangebot jedem das perfekte Studium.</p>
-        <a href="overview.html"><button id="primary" type="button" class="btn">Mehr Anzeigen</button></a>
+        <a href="overview.html" class="btn-home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+          </svg> 
+          <!--<button id="primary" type="button" class="btn">Mehr Anzeigen</button>-->
+        </a>
       </div>
     </div>
     <div class="carousel-item">
@@ -69,7 +76,12 @@
       <div class="carousel-caption d-flex flex-column justify-content-center h-100"> <!--d-none-->
         <h1 class="secon text-shadow">Semester planen</h1>
         <p class="minimal">Pünktlich loslegen und dran bleiben: So klappt es mit der Semesterplanung!</p>
-        <a href="semester.html"><button type="button" class="btn">Mehr Anzeigen</button></a>
+        <a href="overview.html" class="btn-home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+          </svg> 
+          <!--<button id="primary" type="button" class="btn">Mehr Anzeigen</button>-->
+        </a>
       </div>
     </div>
     <div class="carousel-item">
@@ -77,7 +89,12 @@
       <div class="carousel-caption d-flex flex-column justify-content-center h-100"> <!--d-none-->
         <h1 class="secon text-shadow">Verwalten von Vorlesungen</h1>
         <p class="minimal">Ihre aktuellen Vorlesungspläne finden Sie auch in der Campus-App.</p>
-        <a href="vorlesungen.html"><button type="button" class="btn">Mehr Anzeigen</button></a>
+        <a href="overview.html" class="btn-home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+          </svg> 
+          <!--<button id="primary" type="button" class="btn">Mehr Anzeigen</button>-->
+        </a>
       </div>
     </div>
   </div>
