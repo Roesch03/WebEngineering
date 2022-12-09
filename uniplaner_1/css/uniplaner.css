@@ -239,6 +239,10 @@ section {
   max-height: 188px;
 }
 
+.card.h-100{
+  border-radius: 10px;
+}
+
 /*
 .cards{
   display: flex;
@@ -417,6 +421,11 @@ nav.nav-tabs.text-center{
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: rgb(0 0 0 / 0%);
+  isolation: isolate;
+}
+
 .nav-link:hover {
   color: var(--secondary-color);
   cursor: pointer;
@@ -444,6 +453,10 @@ nav.nav-tabs.text-center{
   padding-right: calc(var(--bs-gutter-x) * .5);
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-top: var(--bs-gutter-y);
+}
+
+#tableStudiengang {
+  margin-bottom: 20px;
 }
 
 /*************************/
