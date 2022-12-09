@@ -70,6 +70,9 @@ main {
   border-radius: 20px;
 }
 
+.navbar-dark .navbar-nav .nav-link{
+  color: white;
+}
 
 /* max-height von images im Brand-Bereich*/
 .navbar-brand>img {
@@ -417,26 +420,14 @@ nav.nav-tabs.text-center{
   border-radius: 10px;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
-}
 
-.nav-item a{
-  padding-left: 15px;
-  text-decoration: none;
-  color: var(--dark-color);
-}
 
-/*
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
-  color: var(--light-grey);
-}*/
 
-.nav-link {
+.nav-link{
   display: flex;
   flex-direction: row;
   padding: .5rem 1rem;
-  color: #000000;
+  color: var(--dark-color);
   text-decoration: none;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
@@ -447,12 +438,15 @@ nav.nav-tabs.text-center{
   cursor: pointer;
   transform: translateY(-2px);
 }
+ .nav-link svg{
+  margin-right: 15px;
+ }
 
-.nav-link:hover a{
+.nav-link:hover{
   color: var(--secondary-color);
 }
 
-.nav-link.active a{
+.nav-link.active{
   color: white;
 }
 
