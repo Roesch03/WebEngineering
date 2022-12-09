@@ -235,6 +235,10 @@ section {
   color: var(--light-grey);
 }
 
+.card-img-top {
+  max-height: 188px;
+}
+
 /*
 .cards{
   display: flex;
