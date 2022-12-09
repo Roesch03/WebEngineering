@@ -2,15 +2,16 @@
 /* Global styles             */
 /*****************************/
 :root {
-  --blueberry: #4d678d;
-  --apricot: #F7C331;
-  --citrus: #F7C331;
-  --appleCore: #dbbc91;
-  --hover-color: rgb(206, 147, 216, 1);
-  --light-grey: rgb(241, 243, 243);
-  --darker-grey: rgb(212, 218, 218);
-  --primary-btn-color: rgb(247, 136, 47, 80%);
-  --footer-color: #2364aab8;
+  --primary-color: #a51c30;/*--blueberry: #4d678d;*/
+  --secondary-color: #656f77;/*--apricot: #F7C331;*/
+  /*--citrus: #F7C331;*/
+  /*--appleCore: #dbbc91;*/
+  /*--hover-color: rgb(206, 147, 216, 1);*/
+  --light-grey: #d5d5d5;
+  --darker-grey: #a6a6a6;
+  /*--primary-btn-color: rgb(247, 136, 47, 80%);*/
+  /*--footer-color: #2364aab8;*/
+  --dark-color: #0e0e0e;
 }
 
 html,
@@ -37,7 +38,7 @@ main {
 /* design navbar                               */
 /***********************************************/
 .navbar-custom {
-  background-color: var(--blueberry) !important;
+  background-color: var(--primary-color) !important;
 }
 
 #nav {
@@ -87,7 +88,6 @@ li img{
 /* design sidebar und content area             */
 /***********************************************/
 
-
 hr {
   border-top: 1px solid grey;
   max-width: 90%;
@@ -98,7 +98,7 @@ hr {
 section h1 {
   font-size: 38px;
   line-height: 1.25;
-  color: var(--apricot);
+  color: var(--secondary-color);
   font-weight: 400;
   word-wrap: initial;
   word-spacing: 0;
@@ -139,13 +139,13 @@ section {
 }
 
 .btn {
-  background-color: var(--citrus);
+  background-color: var(--secondary-color);
   border: none;
   border-radius: 45px;
-  border: 1px solid var(--citrus);
+  border: 1px solid var(--secondary-color);
   display: inline-block;
   cursor: pointer;
-  color: #000000;
+  color: white;
   font-size: 15px;
   padding: 5px 20px;
   margin-top: 10px;
@@ -165,7 +165,7 @@ section {
 }
 
 .secon {
-  color: var(--apricot);
+  color: var(white);
   font-size: 290%;
 }
 
@@ -227,7 +227,7 @@ section {
 
 footer {
   display: block;
-  background-color: var(--footer-color);
+  background-color: var(--dark-color);
   bottom: 0px;
   height: 112px;
 }
@@ -254,11 +254,11 @@ input[type=text] {
 
 .submit-button {
   border-radius: 45px;
-  background-color: var(--citrus);
-  border: 1px solid var(--citrus);
+  background-color: var(--dark-color);
+  border: 1px solid var(--dark-color);
   display: inline-block;
   cursor: pointer;
-  color: #000000;
+  color: white;
   font-size: 15px;
   padding: 5px 20px;
   margin-top: 10px;
@@ -270,11 +270,11 @@ input[type=text] {
 
 .submit-button.edit-btn {
   border-radius: 45px;
-  background-color: var(--citrus);
-  border: 1px solid var(--citrus);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   display: inline-block;
   cursor: pointer;
-  color: #000000;
+  color: white;
   font-size: 15px;
   padding: 5px 5px;
   margin-top: 2px;
@@ -315,6 +315,17 @@ input[type=text] {
 select{
   min-width: 180px;
 }
+
+select {
+  border-radius: 10px;
+  padding: 3px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 15px 20px;
+  background-color: #212529;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
 .col{
   margin: 10px;
   text-align: center;
@@ -324,6 +335,7 @@ label{
   text-align: left;
 }
 select, label{
+  color: white;
   display: block;
 }
 input, label {
@@ -335,14 +347,22 @@ nav.nav-tabs.text-center{
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-  color: #495057;
-  background-color: var(--citrus);
+  color: white;
+  background-color: var(--secondary-color);
   border-color: #dee2e6 #dee2e6 #fff;
   display: flex;
   min-width: 200px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   border-radius: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--light-grey);
 }
 
 .nav-link {
@@ -355,7 +375,7 @@ nav.nav-tabs.text-center{
 }
 
 .nav-link:hover {
-  color: var(--appleCore);
+  color: var(--secondary-color);
   cursor: pointer;
   transform: translateY(-2px);
 }
@@ -428,7 +448,7 @@ nav.nav-tabs.text-center{
 
 .item {
   background-color: rgba(255, 255, 255, 0.8);
-  color: var(--apricot);
+  color: var(--secondary-color);
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -593,16 +613,6 @@ nav a {
 /*************************/
 /* selectbox             */
 /*************************/
-
-select {
-  border-radius: 10px;
-  padding: 3px;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
-  background-color: var(--citrus);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
 
 select:hover {
   transform: translateY(-2px);
