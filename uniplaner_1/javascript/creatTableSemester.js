@@ -1,4 +1,4 @@
-window.addEventListener("load", function (){
+window.addEventListener("load", function () {
 
     console.log("create Table Semester")
 
@@ -10,18 +10,18 @@ window.addEventListener("load", function (){
     var HTML = "<table border=0 width=100% class='table'><tr><th>Bezeichnung</th><th>Studiengang</th><th>Datum</th></tr>";
 
 
-    for(element of data){
+    for (element of data) {
         let newID = element.id
         let newDatum = element.datum
-        HTML += "<tr><td>"+element.bezeichnung+"</td>"
-        HTML += "<td>"+getItemById(getDataFromLocalStorage("studiengang"), element.studiengang).bezeichnung+"</td>"
-        HTML += "<td>"+newDatum+"</td>"
+        HTML += "<tr><td>" + element.bezeichnung + "</td>"
+        HTML += "<td>" + getItemById(getDataFromLocalStorage("studiengang"), element.studiengang).bezeichnung + "</td>"
+        HTML += "<td>" + newDatum + "</td>"
         HTML += `<td scope="col"><img src="assets/edit.png" width="25px" onclick="editSemester(${newID})"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${newID})"></tr>`
     }
 
     HTML += "</table>";
     console.log(data.length)
-    if(data.length==0){
+    if (data.length == 0) {
         HTML = "<h3 class='text-center p-2'>Noch keine Einträge</h3>"
     }
 
@@ -30,23 +30,23 @@ window.addEventListener("load", function (){
     styleTable(document.getElementById("tableSemester"))
 });
 
-function setSelcetionStudiengang(){
+function setSelcetionStudiengang() {
     let data = getDataFromLocalStorage('studiengang')
     console.log(data)
     var HTML = ""
-    for(item of data){
+    for (item of data) {
         console.log(item.bezeichnung)
         HTML += "<option value=" + item.id + ">" + item.bezeichnung + "</option>";
     }
     document.getElementById("selectStudiengang2").innerHTML = HTML;
 }
 
-function editSemester(id){
+function editSemester(id) {
     console.log("editSemester")
     let data = getDataFromLocalStorage('semester')
     let editElement = "No data found"
-    for(item of data){
-        if(item.id == id){
+    for (item of data) {
+        if (item.id == id) {
             editElement = item
         }
     }
@@ -56,5 +56,5 @@ function editSemester(id){
     let dataType = 'semester'
     console.log("delete: " + dataType + id);
     let newData = getDataFromLocalStorage(dataType)
-    setDataToLocalStorage(dataType, newData.filter(item => {return item.id!=id}))
+    setDataToLocalStorage(dataType, newData.filter(item => { return item.id != id }))
 }

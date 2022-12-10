@@ -76,7 +76,8 @@ function getDataVorlesung() {
         bezeichnung: document.getElementById("bezeichnung").value,
         modul: document.getElementById("modul").value,
         dauer: document.getElementById("dauer").value,
-        studiengang: document.getElementById("selectStudiengang").value
+        studiengang: document.getElementById("selectStudiengang").value,
+        dozent: document.getElementById("selcetDozent").value
     }
 
     document.getElementById("bezeichnung").value = "";

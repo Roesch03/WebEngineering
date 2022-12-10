@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     let data = getDataFromLocalStorage(type)
     console.log(data)
 
-    var HTML = "<table border=0 width=100% class='table'><tr><th>Bezeichnung</th><th>Modul</th><th>Dauer</th><th>Studiengang</th></tr>";
+    var HTML = "<table border=0 width=100% class='table'><tr><th>Bezeichnung</th><th>Modul</th><th>Dauer</th><th>Studiengang</th><th>Dozent</th></tr>";
 
 
     for (element of data) {
@@ -15,6 +15,7 @@ window.addEventListener("load", function () {
         HTML += "<td>" + element.modul + "</td>"
         HTML += "<td>" + element.dauer + "</td>"
         HTML += "<td>" + getItemById(getDataFromLocalStorage("studiengang"), element.studiengang).bezeichnung + "</td>"
+        HTML += "<td>" + getItemById(getDataFromLocalStorage("dozent"), element.dozent).name + "</td>"
         HTML += `<td scope="col"><img src="assets/edit.png" width="25px" onclick="editVorlesung(${element.id})"><img src="assets/delete.png"width="25px" onclick="onDeletData('${type}', ${element.id})"></tr>`
     }
 
@@ -26,6 +27,7 @@ window.addEventListener("load", function () {
 
     document.getElementById("tableVorlesung").innerHTML = HTML;
     setSelcetionStudiengang();
+    setSelcetionDozent();
     styleTable(document.getElementById("tableVorlesung"))
 });
 
@@ -38,6 +40,17 @@ function setSelcetionStudiengang() {
         HTML += "<option value=" + item.id + ">" + item.bezeichnung + "</option>";
     }
     document.getElementById("selectStudiengang").innerHTML = HTML;
+}
+
+function setSelcetionDozent() {
+    let data = getDataFromLocalStorage('dozent')
+    console.log(data)
+    var HTML = ""
+    for (item of data) {
+        console.log(item.name)
+        HTML += "<option value=" + item.id + ">" + item.name + "</option>";
+    }
+    document.getElementById("selcetDozent").innerHTML = HTML;
 }
 
 function editVorlesung(id) {
