@@ -15,7 +15,6 @@ html,
 body {
   height: 100vh;
   width: 100%;
-
 }
 
 .spaceToBottom {
@@ -27,8 +26,7 @@ header {
 }
 
 main {
-  min-height: calc(100vh - 200px);
-  /*body-footer*/
+  min-height: calc(100vh - 112px); /*100 view height - footer height -> footer ganz unten*/
 }
 
 #background {
@@ -314,8 +312,6 @@ input[type=text] {
   }
 }
 
-
-
 select{
   min-width: 180px;
 }
@@ -366,9 +362,6 @@ nav.nav-tabs.text-center{
   transition: all 0.3s ease 0s;
   border-radius: 10px;
 }
-
-
-
 
 .nav-link{
   display: flex;
@@ -421,7 +414,7 @@ nav.nav-tabs.text-center{
 }
 
 #tableStudiengang {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 /*************************/

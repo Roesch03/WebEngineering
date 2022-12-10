@@ -44,7 +44,33 @@
             <a class="nav-link" href="#impressum">Impressum</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="assets/login_img.jpg" alt=""></a>
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle signIn" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                Sign in
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                </svg>
+              </button>
+              <form class="dropdown-menu p-4">
+                <div class="mb-3">
+                  <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary signIn">Sign in</button>
+              </form>
+            </div>
           </li>
         </ul>       
       </div>
@@ -120,7 +146,7 @@
         <p>
           Diese Web-Anwendung dient der Vorlesungsplanung. 
           Jeder Dozierende kann online seine Termine erfassen, sodass der Vorlesungsplan erstellt und veröffentlicht werden kann.
-          Für Studierende ist es möglich Studiengänge, Vorlesungen, Semester, Dozierende und Vorlesungstermine zu bearbeiten. 
+          Es ist möglich Studiengänge, Vorlesungen, Semester, Dozierende und Vorlesungstermine zu bearbeiten. 
           Zusätzlich besteht die Möglichkeit des Hinzufügens von Vorlesungen und Dozierenden zu einem Studiengang, aber auch von Vorlesungsterminen zu einem Semester.<br/>
           Der Vorlesungsplaner ist in mehrere Bereiche gegliedert:
           <ul>
@@ -132,7 +158,7 @@
             <li>Impressum</li>
           </ul>
           Der Home-Bereich dient als Willkommens- und Übersichtsseite mit Links zur Verwaltung.<br/>
-          In der Verwaltung kann jeder Studierende Studiengänge, Vorlesungen, Dozierende, Semester und Vorlesungstermine einsehen und verwalten.<br/>
+          In der Verwaltung können Sie Studiengänge, Vorlesungen, Dozierende, Semester und Vorlesungstermine einsehen und verwalten.<br/>
           Das Dashboard wurde für Dozierende angelegt, damit sie möglichst viele Details über Vorlesungen, Dozierende und Studiengänge auf einen Blick erfassen können.<br/>
           Sie befinden sich gerade in den Funktionen. Hier geht es darum, welche Funktionen der Uniplaner für Sie bereitstellt.<br/>
           Der Bereich “Über uns” dreht sich um das Team hinter dem Uniplaner.<br/>

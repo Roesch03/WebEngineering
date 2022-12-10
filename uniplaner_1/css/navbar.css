@@ -1,3 +1,4 @@
+
 /***********************************************/
 /* design navbar                               */
 /***********************************************/
@@ -36,6 +37,10 @@
   .navbar-dark .navbar-nav .nav-link{
     color: white;
   }
+
+  .navbar-dark .navbar-nav .nav-link:hover{
+    color: white;
+  }
   
   /* max-height von images im Brand-Bereich*/
   .navbar-brand>img {
@@ -43,9 +48,69 @@
     width: auto;
     display: inline-block;
   }
-  
-  /* userpicture */
-  li img{
-    max-width: 30px;
-    border-radius: 100%;
+
+  .nav-item:hover{
+    cursor: pointer;
   }
+  
+  /* Sign in */
+  .btn.btn-primary.dropdown-toggle.signIn{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
+    font: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px;
+    margin: 2px 0px 0px 0px;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    transition: none;
+  }
+
+.btn.btn-primary.dropdown-toggle.signIn:hover{
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  transform: none;
+  color: white;
+}
+
+.nav-item svg{
+  margin-left: 5px;
+}
+
+.dropdown-menu.p-4{
+  min-width: 15rem;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #ec988e;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(253, 17, 13, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+  border-color: #ec988e;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(253, 17, 13, 0.25);
+}
+
+.btn.btn-primary.signIn:hover{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn.btn-primary.signIn:focus{
+  border-color: #ec988e;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(253, 17, 13, 0.25);
+}
