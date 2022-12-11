@@ -1,10 +1,10 @@
 # Starter-Projekt für die Anwendung Uniplaner
 
-> Erstellt von:
->
-> - Anna Kohlbecker (Matrikelnummer: 6164275)
-> - Marius Rösch (Matrikelnummer: 3624271)
-> - Moritz Wirth (Matrikelnummer: 1493681)
+Erstellt von:
+
+- Anna Kohlbecker (Matrikelnummer: 6164275)
+- Marius Rösch (Matrikelnummer: 3624271)
+- Moritz Wirth (Matrikelnummer: 1493681)
 
 ---
 
