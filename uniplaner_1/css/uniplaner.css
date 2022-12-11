@@ -250,6 +250,10 @@ footer {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--secondary-color);
+}
+
 /*************************/
 /* media queries         */
 /*************************/
