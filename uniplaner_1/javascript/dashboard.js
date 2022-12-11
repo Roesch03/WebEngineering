@@ -43,7 +43,7 @@ function loadDashboard() {
     //print Studiengänge
     let studiengangData = getDataFromLocalStorage("studiengang")
     let studiengangText = ""
-    var counter = 0
+    var counter = 1
     for (item of studiengangData) {
         console.log(item)
         if (editElement.id == item.studiengangsleiter) {
@@ -57,7 +57,7 @@ function loadDashboard() {
     //print Vorlesungen
     let vorlesungData = getDataFromLocalStorage("vorlesung")
     let vorlesungText = ""
-    var counter = 0
+    var counter = 1
     for (item of vorlesungData) {
         console.log(item)
         if (editElement.id == item.dozent) {
