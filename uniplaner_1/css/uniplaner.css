@@ -101,13 +101,13 @@ section {
 }
 
 
-@media (max-height: 680px){
+@media (max-height: 580px){
   .carousel-caption {
     top: 0;
   }
 }
 
-@media (max-width: 600px), (max-height: 700px){
+@media (max-width: 700px), (max-height: 580px){
   .carousel-caption {
     top: 0;
   }
