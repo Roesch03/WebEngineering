@@ -1,5 +1,13 @@
 # Starter-Projekt für die Anwendung Uniplaner
 
+> Erstellt von:
+>
+> - Anna Kohlbecker (Matrikelnummer: 6164275)
+> - Marius Rösch (Matrikelnummer: 3624271)
+> - Moritz Wirth (Matrikelnummer: 1493681)
+
+---
+
 ## Inhaltsverzeichnis
 
 - Beschreibung
@@ -16,6 +24,8 @@ Es ist möglich Studiengänge, Vorlesungen, Semester, Dozierende und Vorlesungst
 Zusätzlich besteht die Möglichkeit des Hinzufügens von Vorlesungen und Dozierenden zu einem Studiengang, aber auch von Vorlesungsterminen zu einem Semester.
 Somit sind alle erforderlichen Funktionen des Uniplaners abgedeckt.
 Zusätzlich wurde eine Sign-in-Funktion erstellt, um den Uniplaner realistischer wirken zu lassen. Falls es zu einer Veröffentlichung der Webseite kommen sollte, müsste man diese Funktion anpassen.
+
+---
 
 ### Architektur
 
