@@ -1,4 +1,4 @@
-# Starter-Projekt für die Anwendung Uniplaner`
+# Starter-Projekt für die Anwendung Uniplaner
 
 ## Inhaltsverzeichnis
 
@@ -15,7 +15,7 @@ Jeder Dozierende kann online seine Termine erfassen, sodass der Vorlesungsplan e
 Es ist möglich Studiengänge, Vorlesungen, Semester, Dozierende und Vorlesungstermine zu bearbeiten.
 Zusätzlich besteht die Möglichkeit des Hinzufügens von Vorlesungen und Dozierenden zu einem Studiengang, aber auch von Vorlesungsterminen zu einem Semester.
 Somit sind alle erforderlichen Funktionen des Uniplaners abgedeckt.
-Die zusätzliche Sign-in-Funktion wurde nur erstellt, um den Uniplaner realitätsbezogener zu gestalten. Diese Funktion müsste aber noch vervollständigt werden, sobald es ein echter Uniplaner wäre.
+Die zusätzliche Sign-in-Funktion wurde erstellt, um den Uniplaner realistischer wirken zu lassen. Falls es zu einer Veröffentlichung der Webseite kommen sollte, müsste man diese Funktion noch anpassen.
 
 ### Architektur
 

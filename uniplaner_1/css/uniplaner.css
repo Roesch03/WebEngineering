@@ -87,6 +87,32 @@ section {
   min-height: 100%;
 }
 
+.carousel-caption {
+  text-align: center;
+  align-items: center;
+  top: 20%;
+  bottom: 10%;
+}
+
+.carousel-caption>h1 {
+  text-align: center;
+  align-items: center;
+  bottom: 10%;
+}
+
+
+@media (max-height: 680px){
+  .carousel-caption {
+    top: 0;
+  }
+}
+
+@media (max-width: 600px), (max-height: 700px){
+  .carousel-caption {
+    top: 0;
+  }
+}
+
 .btn-home {
   background-color: var(--secondary-color);
   border: none;
@@ -139,19 +165,6 @@ section {
 .secon {
   color: var(white);
   font-size: 290%;
-}
-
-.carousel-caption {
-  text-align: center;
-  align-items: center;
-  top: 20%;
-  bottom: 10%;
-}
-
-.carousel-caption>h1 {
-  text-align: center;
-  align-items: center;
-  bottom: 10%;
 }
 
 .minimal {
@@ -312,6 +325,10 @@ input[type=text] {
   }
 }
 
+/*************************/
+/* selectbox             */
+/*************************/
+
 select{
   min-width: 180px;
 }
@@ -337,6 +354,14 @@ label{
 select{
   color: white;
   display: block;
+}
+
+select:hover {
+  transform: translateY(-2px);
+}
+
+select option {
+  background-color: #e0e0e0;
 }
 
 label{
@@ -471,16 +496,4 @@ nav.nav-tabs.text-center{
     grid-column-start: 2;
     grid-column-end: 4;
   }
-}
- 
-/*************************/
-/* selectbox             */
-/*************************/
-
-select:hover {
-  transform: translateY(-2px);
-}
-
-select option {
-  background-color: #e0e0e0;
 }

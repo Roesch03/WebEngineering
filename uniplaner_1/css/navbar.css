@@ -70,6 +70,13 @@
     transition: none;
   }
 
+  /*ab hier ist navbar vertikal*/
+  @media(max-width: 992px){
+    .btn.btn-primary.dropdown-toggle.signIn{
+      padding: 8px 0px;
+    }
+  }
+
 .btn.btn-primary.dropdown-toggle.signIn:hover{
   background-color: rgba(0,0,0,0);
   box-shadow: none;
