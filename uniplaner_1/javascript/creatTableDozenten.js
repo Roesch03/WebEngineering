@@ -42,6 +42,7 @@ function editDozent(id) {
     document.getElementById("email").value = editElement.email
     document.getElementById("alter").value = editElement.alter
     document.getElementById("github").value = editElement.github
+
     //delet old object
     let dataType = 'dozent'
     console.log("delete: " + dataType + id);

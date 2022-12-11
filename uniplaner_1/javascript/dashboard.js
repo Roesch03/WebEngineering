@@ -4,13 +4,14 @@ window.addEventListener("load", function () {
 
     console.log("test")
     setSelectDashboardDozent()
+    printDozenten()
 
 });
 
 function setSelectDashboardDozent() {
     let data = getDataFromLocalStorage('dozent')
     console.log(data)
-    var HTML = ""
+    var HTML = "<option value=>Dozent auswählen</option>"
     for (item of data) {
         console.log(item.name)
         HTML += "<option value=" + item.id + ">" + item.name + "</option>";
@@ -67,5 +68,15 @@ function loadDashboard() {
         }
     }
     vorlesungDozent.innerHTML = vorlesungText
+}
 
+//print Dozenten
+function printDozenten() {
+    let data = getDataFromLocalStorage('dozent')
+    HTML = ""
+    for (item of data) {
+        HTML += "<li class='list-group-item'>" + item.name + "</li>";
+    }
+
+    document.getElementById("dozenten").innerHTML = HTML;
 }
