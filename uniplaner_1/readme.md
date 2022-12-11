@@ -37,7 +37,7 @@ Im restlichen "uniplaner_1"-Ordner befindet sich unser Html-Code und die readme-
 
 ### Design
 
-Generell haben wir uns für ein schlichtes, aber auch lebendiges Design entschieden.
+Generell haben wir uns für ein schlichtes, aber auch lebendiges Design entschieden. Wir haben Bootstrap zur Realisierung unserer Webseite-Features verwendet.
 Wir haben uns dabei am Material Design von Google orientiert. Diese Designart ist geprägt von kartenähnlichen Flächen, Minimalismus, aber auch von der Verwendung vieler Animationen und Schatten.
 Unsere Seiten sind nicht mit Inhalt überladen, um dem User eine bessere Übersicht zu verschaffen. Auch trägt die Verwendung von Containern dazu bei.
 Es gibt viele Buttons, welche die Interaktion mit der Seite erleichtern.
@@ -47,7 +47,7 @@ Alle unsere Seiten wurden einheitlich nach diesem Design gestaltet.
 
 Die Icons von Bootstrap sorgen für eine schnellere Orientierung und machen die Webseite intuitiver.
 
-Beim Homebereich haben wir uns für farbige Bilder entschieden, da diese für etwas mehr Leben und Freude bei der Nutzung des Planers sorgen. Die Bilder des Carousels besitzen keinen Abstand zum Seitenrand, da dies besser aussieht und sich der Homebereich dadurch von der restlichen Webseite abhebt.
+Beim Homebereich haben wir uns für farbige Bilder (aus https://www.pexels.com) entschieden, da diese für etwas mehr Leben und Freude bei der Nutzung des Planers sorgen. Die Bilder des Carousels besitzen keinen Abstand zum Seitenrand, da dies besser aussieht und sich der Homebereich dadurch von der restlichen Webseite abhebt.
 
 Ein weiters Merkmal unserer Seite besteht aus der zentral gelgenen Navigationsleiste der Verwaltung. Wir haben uns dazu entschieden, da wir eine etwas andere Lösung als andere Studenten wählen wollten.
 

@@ -49,7 +49,7 @@ function loadDashboard() {
         console.log(item)
         if (editElement.id == item.studiengangsleiter) {
             console.log("found item: ")
-            studiengangText += "<tr><th scope='row'>" + counter + "</th><td>" + item.bezeichnung + "</td><td>...</td></tr>"
+            studiengangText += "<tr><th scope='row'>" + counter + "</th><td>" + item.bezeichnung
             counter++
         }
     }
