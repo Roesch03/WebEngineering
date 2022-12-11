@@ -120,17 +120,16 @@ function getNewId() {
     return id;
 }
 
-function setDropDownData(type) { // wird derzeit nicht benötigt
-    let item = getDataFromLocalStorage(type); //console.log vom item ausgebn und mit console debuggen
+function setDropDownData(type) {
+    let item = getDataFromLocalStorage(type);
     let option;
     item.array.forEach(element => {
-        option += '<option value="' + element.dozent + '" />'; //Dozent muss noch durch eine variabel ausgetauscht werden
+        option += '<option value="' + element.dozent + '" />';
     });
     document.getElementById('dlDozent').innerHTML = option;
 }
 
 function getItemById(dataArray, id) {
-    //return JSON.parse(dataArray.filter(item => {return item.id == id})[0]); //gibt uns die Daten mit der id
     for (item of dataArray) {
         if (item.id == id) {
             return item
