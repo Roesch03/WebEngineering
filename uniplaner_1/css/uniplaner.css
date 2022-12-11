@@ -198,6 +198,7 @@ section {
 }
 
 .card-img-top {
+  object-fit: cover;
   border-radius: 10px 10px 0px 0px;
   max-height: 200px;
 }
